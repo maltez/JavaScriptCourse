@@ -2,6 +2,6 @@
  * @param {number} minute
  * @returns {number} Returns the quoter based on input.
  */
-function hourQuoter (minute) {
+module.exports = function hourQuoter (minute) {
     return;
 }

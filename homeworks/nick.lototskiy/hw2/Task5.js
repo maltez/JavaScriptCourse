@@ -2,6 +2,6 @@
  * @param {number} num
  * @returns {number} Returns factorial of num.
  */
-function factorial(num) {
+module.exports = function factorial(num) {
     return;
 }

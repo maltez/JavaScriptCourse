@@ -3,6 +3,6 @@
  * @param {number} input
  * @returns {string} Returns the string from 1 to input.
  */
-function stringBuilder(input) {
+module.exports = function stringBuilder(input) {
     return;
 }
