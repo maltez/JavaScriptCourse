@@ -3,6 +3,8 @@
  * @param {number} second
  * @returns {boolean} Returns devide first on second without remainder or not.
  */
-module.exports = function isDevided(first, second) {
+function isDevided(first, second) {
     return;
 }
+
+module.exports = isDevided;
