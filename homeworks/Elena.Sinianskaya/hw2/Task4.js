@@ -6,19 +6,20 @@
 
 //  _____start_____
 function isDevided(first, second) {
-    if (typeof first === "number" && typeof second === "number"){
-       if (first%second === 0){
-         return true
-      }
-      else {
-         return false
-      }
+  if (typeof first === "number" && typeof second === "number"){
+     if (first%second === 0){
+       return true;
     }
     else {
-      return("Not a number! Please, wright a number")
+       return false;
     }
   }
-  console.log(isDevided(10, 2))
+  else {
+    return("Not a number! Please, wright a number");
+  }
+}
+console.log(isDevided(10, 2));
+
 //   finish
 
 module.exports = isDevided;
