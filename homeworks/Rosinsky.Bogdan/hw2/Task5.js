@@ -5,6 +5,9 @@
 function factorial(num) {
     // Проверка на число.
     if (typeof num === 'number') {
+        // Если отрецательное число то завершыть.
+        if (num < 0) return false;
+
         var factorial = 1;
         // Вычисления факториала.
         while (num >= 1) {

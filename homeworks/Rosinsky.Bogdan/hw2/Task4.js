@@ -7,7 +7,7 @@ function isDevided(first, second) {
     if (typeof first === 'number' && typeof second === 'number') {
         var result = first / second;
         // Если результат не число вернуть сообщение.
-        if (isNaN(result)) {
+        if (!isFinite(result)) {
             return 'can not be divided into zero!';
         } else {
             // Вернуть true если число поделилось без остатка, или вернуть false если остаток есть.
@@ -17,5 +17,6 @@ function isDevided(first, second) {
         return 'variable is not a number!';
     }
 }
+
 
 module.exports = isDevided;
