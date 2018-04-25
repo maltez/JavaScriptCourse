@@ -6,25 +6,27 @@
 function stringBuilder(input) {
     var result = '';
 
-    if (isNaN(input)) {
-        result = "This is string";
-    } else {
-        if (input > 0) {
-            for( var i = 1; i <= input; i++) {
-                result += i + ';';
-            } 
-        } else {
-            for( var i = input; i <= 1; i++) {
-                result += i + ',';
-            } 
-        }
+    if (typeof input != 'number') {
+        return;
     }
+
+    if (input > 0) {
+        for( var i = 1; i <= input; i++) {
+            result += i + ',';
+        } 
+    } 
+
+    if (input < 0) {
+        for( var d = 1; d >= input; d--) {
+            result += d + ',';
+        } 
+    } 
 
     // console.log(result);
     return(result);
 };
 
-// stringBuilder(-5);
+// stringBuilder(6);
 
 module.exports = stringBuilder;
 

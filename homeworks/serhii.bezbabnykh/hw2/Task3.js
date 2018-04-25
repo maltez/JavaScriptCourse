@@ -6,14 +6,14 @@ function secondsCount(hours) {
     var hours;
     var seconds;
 
-    if(isNaN(hours)) {
-        seconds = "This is string"
+    if(typeof hours != 'number') {
+        return;
+    }
+
+    if (hours < 0) {
+        seconds = "Error";
     } else {
-        if (hours < 0) {
-            seconds = "Error"
-        } else {
-            seconds = hours * 3600;
-        }
+        seconds = hours * 3600;
     }
 
     // console.log(seconds);

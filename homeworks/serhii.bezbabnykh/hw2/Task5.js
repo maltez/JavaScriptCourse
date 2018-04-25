@@ -5,8 +5,8 @@
 function factorial(num) {
     var result = 1;
 
-    if (isNaN(num)) {
-        result = "This is string";
+    if (typeof num != 'number' || num < 0) {
+        return;
     } else {
         for (var i = 1; i <= num; i++) {
             result *= i;
@@ -17,6 +17,6 @@ function factorial(num) {
     return(result);
 }
 
-// factorial('3');
+// factorial(3);
 
 module.exports = factorial;

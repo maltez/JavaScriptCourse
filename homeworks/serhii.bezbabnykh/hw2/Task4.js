@@ -9,21 +9,24 @@ function isDevided(first, second) {
     var result;
 
     if(isNaN(first) || isNaN(second)) {
-        result = "This is string"
-    } else {
-        result = first % second;
-
-        if (result>0) {
-            result = false;
-        } else {
-            result = true;
-        }
+        return;
     }
 
+    result = first % second;
+
+    if (result>0) {
+        result = false;
+    }
+
+    if (result === 0) {
+        result = true;
+    }
+
+    
     // console.log(result);
     return(result);
 }
 
-// isDevided(6, 2);
+// isDevided(6, 3);
 
 module.exports = isDevided;
