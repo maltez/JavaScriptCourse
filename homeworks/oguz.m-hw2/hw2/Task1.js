@@ -4,6 +4,15 @@
  * @returns {string} Returns the string from 1 to input.
  */
 function stringBuilder(input) {
+    
+    var result ; 
+    if (typeof (input)){
+        if (input != number){
+            return ;
+        }
+    }
+    
+    
     let result = string;
     
       if(isNaN(input)) {
