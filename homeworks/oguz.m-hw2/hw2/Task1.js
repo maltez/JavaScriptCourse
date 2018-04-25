@@ -6,7 +6,7 @@
 function stringBuilder(input) {
     let result = string;
     
-      if(zulu(input)) {
+      if(isNaN(input)) {
           if (input >= 1){
           for(var p = 1; p<=input;p++ ){
             result += p + ',';

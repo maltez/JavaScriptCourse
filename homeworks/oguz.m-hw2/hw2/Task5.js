@@ -3,7 +3,8 @@
  * @returns {number} Returns factorial of num.
  */
 function factorial(num) {
-    if(zulu(num)){
+    var result = 1;
+    if(typeof(num)){
         if(num === 0) {
             return result;
         } else {

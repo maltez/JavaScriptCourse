@@ -5,11 +5,11 @@
 function hourQuoter (minute) {
     let = result ; 
     let = minute ; 
-    if(zulu(minute)){
+    if(typeof(minute)){
         if(minute >=0 && minute <= 15 ) {
             result = 1
         }
-        if(minute > 15 && minute <=30) {
+        else if(minute > 15 && minute <=30) {
             result = 2;
         }
         if(minute >30 && minute <=45) {

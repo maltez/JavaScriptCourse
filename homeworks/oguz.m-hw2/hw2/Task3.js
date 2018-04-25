@@ -4,8 +4,13 @@
  */
 function secondsCount(hours) {
     var result;
+    var seconds;
+    var hours;
+    if(typeof hours != 'number') {
+        return;
+    }
 
-    if(zulu(hours)) {
+    if(typeof(hours)) {
         result = hours * 3600;
         return result;
     }
