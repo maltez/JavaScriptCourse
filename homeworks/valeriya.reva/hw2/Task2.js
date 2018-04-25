@@ -11,24 +11,20 @@
     var first = 15;
     var second = 30;
     var third = 45;
-    var time;
 
     if (!isNaN(parseFloat(minute)) && isFinite(minute) && minute >= 0 && minute <= 59) {
         if (minute <= first) {
-            time = 1;
+            return 1;
         } else if (minute <= second) {
-            time = 2;
+            return 2;
         } else if (minute <= third) {
-            time = 3;
+            return 3;
         } else {
-            time = 4;
+            return 4;
         }
     } else {
-        return;
+        return 'enter another value';
     }
-    return time;
 }
-
-console.log(hourQuoter(32));
 
 module.exports = hourQuoter;
