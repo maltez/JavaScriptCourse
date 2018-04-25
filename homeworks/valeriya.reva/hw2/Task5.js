@@ -4,18 +4,17 @@
  */
 
 function factorial(num) {
-    var result = 1;
 
     if (typeof(num) == 'number' && num >= 0) {
-        for (i = 1; i <= num; i++) {
-            result = result * i;
-        }   
+
+        return (num != 1) ? num * factorial(num - 1) : 1;
+
     } else {
-        return;
+        return 'enter another value';
     }
 
-    return result;
 }
 
-module.exports = factorial;
+console.log(factorial(5));
 
+module.exports = factorial;
