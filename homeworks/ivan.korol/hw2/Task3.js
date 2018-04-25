@@ -6,10 +6,9 @@ function secondsCount(hours) {
     var result;
 
     if(Number.isInteger(hours)) {
-        result = hours * 60 * 60;
+        result = hours * 3600;
         return result;
     }
-
 
     return;
 }
