@@ -14,7 +14,7 @@ function stringBuilder(n) {
       // возвращает строку, если n>=0 от 0 до n (включительно, т.к. указали, что i<=n ).
       if (n>=1){
          for (i=1; i<=n; i++){
-           strPositive += ',' + i 
+           strPositive +="," + i 
          }
          return strPositive; //ставим тут, а не в середине, т.к. return прекращает функцию.
       }

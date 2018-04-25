@@ -5,7 +5,7 @@
 
 // ______start_______
  function factorial(num) {
-    if (typeof num === 'number'){
+    if (typeof num === "number"){
     var muliply = 1;
     var i;
       for (i=2; i<=num; i++){
@@ -14,7 +14,7 @@
       return muliply;
     }
     else {
-      return ('Not a number')
+      return ("Not a number")
     }
   }
   console.log (factorial(7));

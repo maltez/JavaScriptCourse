@@ -7,7 +7,7 @@ function secondsCount(hours) {
       return (hours * 3600)
     }
     else {
-      return ('It\'s not a number! Please, wright a number.')
+      return ("Not a number! Please, wright a number.")
     }
   }
   console.log (secondsCount(5))
