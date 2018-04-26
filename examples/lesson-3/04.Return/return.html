@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Return</title>
+</head>
+<body>
+    <script>
+        function factorial() {
+            let i = 1;
+            let input = prompt('Please enter a number', 1);
+    
+            let factorial = 1;
+
+            if (input <= 1) {
+                return factorial;
+            }
+    
+            // If input is equal 1 or below
+            // this code won't be executed
+            while(i <= input) {
+                factorial *= i++;
+            }
+    
+            return factorial;
+        }
+    </script>
+</body>
+</html>
