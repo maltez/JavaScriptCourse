@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // global variable
+        let name = 'John';
+
+        function one() {
+            // local variable of one
+            let foo = 'foo';
+
+            function two() {
+                // local variable of two
+                let bar = 'bar';
+
+                function three() {
+                    // local variable of three
+                    let baz = 'baz';
+
+                    console.log(name); // 'John'
+                    console.log(foo); // 'foo'
+                    console.log(bar); // 'bar'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
