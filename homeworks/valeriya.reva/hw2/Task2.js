@@ -8,7 +8,7 @@
     var second = 30;
     var third = 45;
 
-    if (!isNaN(parseFloat(minute)) && isFinite(minute) && minute >= 0 && minute <= 59) {
+    if (typeof(minute) === 'number' && minute > 0 && minute <= 59) {
         if (minute <= first) {
             return 1;
         } else if (minute <= second) {
