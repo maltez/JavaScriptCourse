@@ -10,7 +10,7 @@ function isDevided(first, second) {
 
     if (typeof(first) == 'number' && typeof(second) == 'number' ) {
 
-        return (result === 0) ? true : false;
+        return result === 0;
 
     } else {
         return 'Is not a number';
