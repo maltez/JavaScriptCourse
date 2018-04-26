@@ -3,26 +3,19 @@
  * @returns {number} Returns the quoter based on input.
  */
 function hourQuoter (minute) {
-    var result;
 
     if (Number.isInteger(minute)) {
-        if (minute >= 0 && minute <= 15) {
-            result = 1;
+        if(minute < 0 && minute > 59) {
+            return;
+        } else if (minute >= 0 && minute <= 15) {
+            return 1;
+        } else  if (minute >= 16 && minute <= 30) {
+            return 2;
+        } else if (minute >= 31 && minute <= 45) {
+            return 3;
+        } else if (minute >= 46 && minute <= 59) {
+            return 4;
         }
-    
-        if (minute >= 16 && minute <= 30) {
-            result = 2;
-        }
-    
-        if (minute >= 31 && minute <= 45) {
-            result = 3;
-        }
-    
-        if (minute >= 46 && minute <= 59) {
-            result = 4;
-        }
-        
-        return result;
     }
 
     return;

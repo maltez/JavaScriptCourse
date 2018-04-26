@@ -20,7 +20,6 @@ function stringBuilder(input) {
                 result = arr.join(',');
             }
         }
-
         return result;
     }
 

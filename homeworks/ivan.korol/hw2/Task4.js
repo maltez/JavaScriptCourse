@@ -4,16 +4,16 @@
  * @returns {boolean} Returns devide first on second without remainder or not.
  */
 function isDevided(first, second) {
-    var state = false;
 
     if(Number.isInteger(first) && Number.isInteger(second)) {
-        
-        if(first % second === 0 && second !== 0) {
-            state = true;
+        if (second === 0) {
+            return false;
+        } else if (first % second === 0) {
+            return true;
         }
     }
 
-    return state;
+    return false;
 }
 
 module.exports = isDevided;
