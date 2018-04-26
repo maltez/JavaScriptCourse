@@ -21,15 +21,12 @@
 // }
 //  _____finish_____
 
-// Вариант-2
+// Вариант-2 (более правильный)
 function isDevided(first, second) {
-  if (typeof first === "number" && typeof second === "number" && first%second === 0 ){
-        return true;
-    }
-    else {
-       return false;
-    }
+  if (typeof first === "number" && typeof second === "number"){
+        return first%second === 0;
   }
+}
  
 console.log(isDevided(11, 2));
 

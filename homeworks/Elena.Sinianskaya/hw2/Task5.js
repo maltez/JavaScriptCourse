@@ -33,7 +33,7 @@ function factorial(num) {
     }  
     return factorial;  
 }  
-  
+ 
 console.log(factorial(-8));  
 
 //  _____end_______ 

@@ -2,7 +2,8 @@
  * @param {number} hours
  * @returns {number} Returns count of seconds in input hours.
  */
-
+// Функция принимает количество часов (проверить что это число).
+// Функция возвращает количество секунд в переданых часах.
 //  _____start_____
 function secondsCount(hours) {
   if (typeof hours === "number"){
