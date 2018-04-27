@@ -4,20 +4,30 @@
  * @returns {Array<number>} Returns filtered array.
  */
 function advancedFilter(input) {
-    var newArray = [];
-
-    for(var i = 0; i < input.length; i++) {
     
-        if(isNumberInRange(input[i])) {
-            newArray.push(input[i]);
+    if(Array.isArray()) {
+        var newArray = [];
+        var error = 'invalid type';
+
+        for(var i = 0; i < input.length; i++) {
+
+            if(!Number.isInteger(input[i])) {
+                return error;
+            }
+        
+            if(isNumberInRange(input[i])) {
+                newArray.push(input[i]);
+            }
         }
+
+        return newArray;
     }
 
-    return newArray;
+    return error;
 }
 
 function isNumberInRange(num) {
-    return num > 0 && num < 10 ? true : false;
+    return num > 0 && num < 10;
 }
 
 module.exports = advancedFilter;

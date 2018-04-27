@@ -5,20 +5,30 @@
  */
 
 function negativeFilter(input) {
-    var newArray = [];
 
-    for(var i = 0; i < input.length; i++) {
+    if (Array.isArray(input)) {
+        var newArray = [];
+        var error = 'invalid type';
+
+        for(var i = 0; i < input.length; i++) {
+
+            if(!Number.isInteger(input[i])) {
+                return error;
+            }
     
-        if(isPositive(input[i])) {
-            newArray.push(input[i]);
+            if(isPositive(input[i])) {
+                newArray.push(input[i]);
+            }
         }
+
+        return newArray;
     }
-    
-    return newArray;
+
+    return error;
 }
 
 function isPositive(num) {
-    return num >= 0 ? true : false;
+    return num >= 0;
 }
 
 module.exports = negativeFilter;
