@@ -7,13 +7,13 @@
 function negativeFilter(input) {
     var newArray = [];
 
-    for(var i = 0; i < arr.length; i++) {
+    for(var i = 0; i < input.length; i++) {
     
         if(isPositive(input[i])) {
             newArray.push(input[i]);
         }
     }
-
+    
     return newArray;
 }
 
