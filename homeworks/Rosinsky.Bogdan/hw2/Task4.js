@@ -4,18 +4,15 @@
  * @returns {boolean} Returns devide first on second without remainder or not.
  */
 function isDevided(first, second) {
-    if (typeof first === 'number' && typeof second === 'number') {
-        var result = first / second;
-        // Если результат не число вернуть сообщение.
-        if (!isFinite(result)) {
-            return 'can not be divided into zero!';
-        } else {
-            // Вернуть true если число поделилось без остатка, или вернуть false если остаток есть.
-            return (result % 1) ? false : true;
-        }
-    } else {
-        return 'variable is not a number!';
-    }
+       // Exit if the parameters are not numbers.
+       if (typeof first !== 'number' && typeof second !== 'number') return;
+
+       var result = first / second;
+
+       // Output if not number.
+       if (!isFinite(result)) return;
+       // Return true if the number is without remainder, or return false if there is a remainder.
+       return (result % 1 == 0);
 }
 
 

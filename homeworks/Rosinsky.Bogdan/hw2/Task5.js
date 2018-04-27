@@ -3,19 +3,19 @@
  * @returns {number} Returns factorial of num.
  */
 function factorial(num) {
-    // Проверка на число.
+    // Check for a number.
     if (typeof num === 'number') {
-        // Если отрецательное число то завершыть.
-        if (num < 0) return false;
+        // If the number is negative then exit the function.
+        if (num < 0) return;
 
         var factorial = 1;
-        // Вычисления факториала.
+        // Factorial calculations.
         while (num >= 1) {
             factorial *= num--;
         }
         return factorial;
-    } else { // Вернуть сообщение если аргумент не число.
-        return 'variable is not a number!';
+    } else {
+        return;
     }
 }
 
