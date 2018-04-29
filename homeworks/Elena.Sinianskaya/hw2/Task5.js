@@ -19,7 +19,7 @@
 //   }
 // }
 
-// Вариант-2 Факториал для отрицательного значения факториала тоже:
+// The second variant-2 
 function factorial(num) {  
     if (num < 0) {  
         return -1;  
@@ -34,7 +34,8 @@ function factorial(num) {
     return factorial;  
 }  
  
-console.log(factorial(-8));  
+// to check:
+// console.log(factorial(-8));  
 
 //  _____end_______ 
 

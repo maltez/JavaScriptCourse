@@ -5,7 +5,8 @@
  */
 // Функция принимает количество часов (проверить что это число).
 // Функция возвращает количество секунд в переданых часах.
-//  _____start_____ Вариант-1
+
+//  _____start_____ The firs variant
 // function isDevided(first, second) {
 //   if (typeof first === "number" && typeof second === "number"){
 //      if (first%second === 0){
@@ -21,14 +22,14 @@
 // }
 //  _____finish_____
 
-// Вариант-2 (более правильный)
+// The second variant (more appropriate)
 function isDevided(first, second) {
   if (typeof first === "number" && typeof second === "number"){
         return first%second === 0;
   }
 }
- 
-console.log(isDevided(11, 2));
+ // to check:
+// console.log(isDevided(11, 2));
 
 
 module.exports = isDevided;

@@ -13,6 +13,7 @@ function secondsCount(hours) {
     return ("Not a number! Please, wright a number.");
   }
 }
-console.log (secondsCount(5));
+// to check:
+// console.log (secondsCount(5));
 // _____finish____
 module.exports = secondsCount;

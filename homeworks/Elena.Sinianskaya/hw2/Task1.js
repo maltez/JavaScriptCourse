@@ -3,7 +3,7 @@
  * @param {number} input
  * @returns {string} Returns the string from 1 to input.
  */
-
+// task_1
 // Функция принимает число 
 // n(проверить что n является числом в противном
 //  случае завершить работу функции). 
@@ -11,23 +11,24 @@
 //  n через разделитель ','. Если число меньше 1 
 //  то выдается строка (например n = -2 строка должна 
 //   быть '1,0,-1,-2').
-//  task_1
-// вариант с 0:
+//  
+// the firnst variant, with 0:
+
 // function stringBuilder(n) {
 //   if (typeof n === "number"){
 //     var i;
-//     var strPositive = 0; //- если ничего не присвоить переменной сейчас, то в возвращаемой строке будет в начале слово undefined.
+//     var strPositive = 0; //- if don't assign anything to the variable now, the return's line will be 'undefined'.
 //     var strNegative = 0;
-//     // возвращает строку, если n>=0 от 0 до n (включительно, т.к. указали, что i<=n ).
+//     // returns string, because if  n>=0 from  0 to n (i<=n ).
 //     if (n>=1){
 //        for (i=1; i<=n; i++){
 //          strPositive +="," + i ;
 //        }
-//        return strPositive; //ставим тут, а не в середине, т.к. return прекращает функцию.
+//        return strPositive; //return finishes a function
 //     }
-//     // возвращает строку от 0 до -n.
+//    
 //     else if (n<=1){
-//               for (i=-1; i>=n; i--){//i=-1 - чтоб строка формировалась последовательно. А i>=n - чтоб и n возвращало включительно.
+//               for (i=-1; i>=n; i--){//i=-1 
 //          strNegative += ',' + i ;
 //        }
 //        return strNegative;
@@ -37,7 +38,7 @@
 //      return ('Unfortunately it\'s not a number! Please, wright a number.' );
 //    }
 // }
-// То же самое с 1:
+// the same with 1:
 function stringBuilder(n) {
   if (typeof n === "number"){
     var i;
@@ -48,7 +49,7 @@ function stringBuilder(n) {
        for (i=1; i<=n; i++){
          strPositive += i + ', ' ;
        }
-       return strPositive.substring(0, strPositive.length - 2); //убираем 2 последних символа , и пробел
+       return strPositive.substring(0, strPositive.length - 2); //delete 2 latest symbols and space
     }
  
     else if (n<=1){
@@ -63,7 +64,8 @@ function stringBuilder(n) {
    }
 }
 
- console.log(stringBuilder(1));
+// to check:
+//  console.log(stringBuilder(1));
 // ______finish tack_1_______
 
 module.exports = stringBuilder;
