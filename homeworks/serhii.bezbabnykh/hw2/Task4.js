@@ -13,18 +13,9 @@ function isDevided(first, second) {
     }
 
     result = first % second;
-
-    if (result>0) {
-        result = false;
-    }
-
-    if (result === 0) {
-        result = true;
-    }
-
+    result === 0 ? true : false;
     
-    // console.log(result);
-    return(result);
+    return;
 }
 
 // isDevided(6, 3);

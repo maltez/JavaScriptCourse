@@ -6,7 +6,7 @@ function secondsCount(hours) {
     var hours;
     var seconds;
 
-    if(typeof hours != 'number') {
+    if(typeof hours !== 'number') {
         return;
     }
 
