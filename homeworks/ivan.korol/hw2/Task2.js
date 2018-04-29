@@ -5,7 +5,7 @@
 function hourQuoter (minute) {
 
     if (Number.isInteger(minute)) {
-        if(minute < 0 && minute > 59) {
+        if(minute < 0 || minute > 59) {
             return;
         } else if (minute >= 0 && minute <= 15) {
             return 1;
