@@ -20,10 +20,7 @@ function hourQuoter (minute) {
         }
     }
 
-    // console.log(result);
     return result;
 }
-
-// hourQuoter(28);
 
 module.exports = hourQuoter;

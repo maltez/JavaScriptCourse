@@ -16,10 +16,7 @@ function secondsCount(hours) {
         seconds = hours * 3600;
     }
 
-    // console.log(seconds);
     return(seconds);
 }
-
-// secondsCount(2);
 
 module.exports = secondsCount;

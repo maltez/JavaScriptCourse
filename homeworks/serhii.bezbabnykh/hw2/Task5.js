@@ -13,10 +13,7 @@ function factorial(num) {
         }
     }
 
-    // console.log(result);
     return(result);
 }
-
-// factorial(3);
 
 module.exports = factorial;

@@ -18,6 +18,4 @@ function isDevided(first, second) {
     return;
 }
 
-// isDevided(6, 3);
-
 module.exports = isDevided;

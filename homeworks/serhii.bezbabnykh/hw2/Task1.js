@@ -22,11 +22,8 @@ function stringBuilder(input) {
         } 
     } 
 
-    // console.log(result);
     return(result);
 };
-
-// stringBuilder(6);
 
 module.exports = stringBuilder;
 
