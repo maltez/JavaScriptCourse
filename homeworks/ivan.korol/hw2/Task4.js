@@ -6,11 +6,8 @@
 function isDevided(first, second) {
 
     if(Number.isInteger(first) && Number.isInteger(second)) {
-        if (second === 0) {
-            return false;
-        }
-
-        return first % second === 0;
+        
+        return second === 0 ? false : first % second === 0;
     }
 
     return false;
