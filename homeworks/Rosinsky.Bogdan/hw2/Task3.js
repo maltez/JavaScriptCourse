@@ -4,7 +4,7 @@
  */
 function secondsCount(hours) {
     if (typeof hours === 'number') {
-        // Если часы не отрецательны то вернуть количество секунд.
+        // If the hour is not negative then return the number of seconds.
         if (hours >= 0) {
             return hours * 3600;
         } else {

@@ -3,17 +3,17 @@
  * @returns {number} Returns the quoter based on input.
  */
 function hourQuoter(minute) {
-    // Проверка на число.
+    // Check for a number.
     if (typeof minute === 'number') {
         if (minute < 0) {
             return false;
-        } else if (minute <= 15) { // Первая четверть часа.
+        } else if (minute <= 15) { // First quarter of an hour.
             return 1;
-        } else if (minute <= 30) {  // Вторая четверть часа.
+        } else if (minute <= 30) {  // Second quarter of the hour.
             return 2;
-        } else if (minute <= 45) {  // Третья четверть часа.
+        } else if (minute <= 45) {  // The third quarter of an hour.
             return 3;
-        } else if (minute < 60) { // Четвертая четверть часа.
+        } else if (minute < 60) { // The fourth quarter of an hour.
             return 4;
         } else {
             return false;

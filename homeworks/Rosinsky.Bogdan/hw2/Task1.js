@@ -6,7 +6,9 @@
 function stringBuilder(input) {
 
     //if input argument is not number then finished program
-    if (typeof input !== 'number' || isNaN(input)) return;
+    if (typeof input !== 'number' || isNaN(input)) {
+        return;
+    }
 
     let str = '';
     //from 1 to n
