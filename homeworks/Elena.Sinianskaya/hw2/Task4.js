@@ -3,8 +3,6 @@
  * @param {number} second
  * @returns {boolean} Returns devide first on second without remainder or not.
  */
-// Функция принимает количество часов (проверить что это число).
-// Функция возвращает количество секунд в переданых часах.
 
 //  _____start_____ The firs variant
 // function isDevided(first, second) {
@@ -28,8 +26,5 @@ function isDevided(first, second) {
         return first%second === 0;
   }
 }
- // to check:
-// console.log(isDevided(11, 2));
-
-
+ 
 module.exports = isDevided;

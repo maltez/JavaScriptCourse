@@ -2,7 +2,6 @@
  * @param {number} num
  * @returns {number} Returns factorial of num.
  */
-//Задача -5. Функция принимает число n. Функция возвращает факториал данного числа.
 
 // ______start_______
 // function factorial(num) {
@@ -33,9 +32,6 @@ function factorial(num) {
     }  
     return factorial;  
 }  
- 
-// to check:
-// console.log(factorial(-8));  
 
 //  _____end_______ 
 
