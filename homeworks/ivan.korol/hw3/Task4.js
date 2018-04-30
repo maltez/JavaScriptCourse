@@ -4,7 +4,7 @@
  * @param {string} key key for encoding
  * @returns {Array<number>} Returns encoded array of numbers.
  */
-function encode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя") {
+function encode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ") {
     var keyCodeArray = [];
     var keyLowerCase = key.toLowerCase();
     var stringLowerCase = input.toLowerCase();
@@ -19,21 +19,21 @@ function encode(input, key = "абвгдеёжзийклмнопрстуфхцч
     function keygen(letter, index, sum) {
         for(var k = 0; k < keyArray.length; k++) {
             if(letter === keyArray[k]) {
-                keyCodeArray.push(k + (sum - index));
+                keyCodeArray.push(k + (sum + index));
             }
         }
     }
 
     return keyCodeArray;
 }
-console.log(encode('штирлиц'));
+console.log(encode('штирлиц привет'));
 /**
  * Decode array of numbers to string by Stirlitz method
  * @param {Array<number>} input Array of numbers
  * @param {string} key key for decoding
  * @returns {string} Returns decoded string.
  */
-function decode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя") {
+function decode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ") {
     var keyCodeArray = [];
     var keyLowerCase = key.toLowerCase();
     var keyArray = keyLowerCase.split('');
@@ -45,7 +45,7 @@ function decode(input, key = "абвгдеёжзийклмнопрстуфхцч
   
     function keygen(num, index, sum) {
         for(var k = 0; k < keyArray.length; k++) {
-            if(num === ((sum - index) + k)) {
+            if(num === ((sum + index) + k)) {
                 keyCodeArray.push(keyArray[k]);
             }
         }
@@ -54,7 +54,7 @@ function decode(input, key = "абвгдеёжзийклмнопрстуфхцч
     return keyCodeArray.join('');
 }
 
-console.log(decode([ 32, 25, 14, 21, 15, 11, 24 ]));
+console.log(decode([ 39, 34, 25, 34, 30, 28, 43, 54, 38, 40, 33, 27, 31, 46 ]));
 
 module.exports = {
     encode,
