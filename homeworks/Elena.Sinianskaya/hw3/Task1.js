@@ -9,13 +9,6 @@
 //     return;
 // }
 
-// В функцию передается массив с числами. 
-// Функция должна возвращать из него новый массив,
-// где останутся лежать только положительные числа.
-// Создайте для этого вспомогательную функцию isPositive(), 
-// которая параметром будет принимать число и возвращать true,
-// если число положительное, и false если отрицательное.
-
 var arr = [1, 2, 3, 4, 5, -5, -4, -3, -2, -1];
 
 function negativeFilter(array){
@@ -32,7 +25,5 @@ function negativeFilter(array){
    return number > 0;
  }
  
-// to check:
-//  console.log (negativeFilter(arr));
 
 // module.exports = negativeFilter;
