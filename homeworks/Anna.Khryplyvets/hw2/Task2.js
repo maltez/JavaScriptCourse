@@ -12,13 +12,13 @@ function hourQuoter (minute) {
         if (minute >= 0 && minute <= 14) {
             return first;
         }
-        if (minute >= 15 && minute <= 30) {
+        else if (minute >= 15 && minute <= 30) {
             return second;
         }
-        if (minute >= 31 && minute <= 45) {
+        else if (minute >= 31 && minute <= 45) {
             return third;
         }
-        if (minute >= 46 && minute <= 59) {
+        else if (minute >= 46 && minute <= 59) {
             return fourth;
         }
         return("Are you joking?");

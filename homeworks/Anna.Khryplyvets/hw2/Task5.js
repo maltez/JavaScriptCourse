@@ -4,10 +4,14 @@
  */
 function factorial(num) {
     var factorial = 1;
-    for (var i = 1; i <= num; i++) {
-        factorial = factorial * i;
+
+    if(num > 0){
+        for (var i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+        return(factorial);
     }
-    return(factorial);
+    return('Num must be positive');
 }
 
 factorial();
