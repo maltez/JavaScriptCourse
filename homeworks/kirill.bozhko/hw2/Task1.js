@@ -6,13 +6,15 @@
 function stringBuilder(input) {
     var str = [];
     if (typeof input === 'number') {
-        if (input < 0){
+        
+        if (input < 1){
             var i;
             for (i = 1; i > input; i-- ){
                 str.push(i);
             }
         }
         
+        if (input >= 1){
         var i;
         for (i=1; i < input; i++){
             str.push(i)
@@ -25,7 +27,7 @@ function stringBuilder(input) {
 
     str.join(',');
     return  str.toString();
-};
-
+}
+}
 module.exports = stringBuilder;
 

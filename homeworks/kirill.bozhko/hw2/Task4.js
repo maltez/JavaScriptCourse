@@ -6,7 +6,7 @@
 function isDevided(first, second) {
     var result = first % second;
 
-    if (result == 0) {
+    if (result === 0) {
         return true;
     }
     else {
