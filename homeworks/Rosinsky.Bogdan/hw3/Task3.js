@@ -4,7 +4,9 @@
  * @returns {boolean} Returns is string polindroe or not.
  */
 function isPolindrome(input) {
-    if (typeof input !== 'string') return;
+    if (typeof input !== 'string') {
+        return false;
+    }
 
     const str = input.split(' ').join('').toLowerCase();
     const len = str.length;

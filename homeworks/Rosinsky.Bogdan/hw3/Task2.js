@@ -11,13 +11,17 @@ function isNumberInRange(num) {
 function advancedFilter(input) {
     const err = 'Type error';
 
-    if (!Array.isArray(input)) throw err;
+    if (!Array.isArray(input)) {
+        throw err;
+    }
 
     const rangeOfNumbers = [];
     const len = input.length;
 
     for (let i = 0; i < len; i += 1) {
-        if (typeof input[i] !== 'number') throw err;
+        if (typeof input[i] !== 'number') {
+            throw err;
+        }
 
         if (isNumberInRange(input[i])) {
             rangeOfNumbers.push(input[i]);
