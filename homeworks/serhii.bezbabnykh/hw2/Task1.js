@@ -6,7 +6,7 @@
 function stringBuilder(input) {
     var result = '';
 
-    if (typeof input != 'number') {
+    if (typeof input !== 'number') {
         return;
     }
 
