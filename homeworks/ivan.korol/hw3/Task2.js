@@ -4,13 +4,13 @@
  * @returns {Array<number>} Returns filtered array.
  */
 function isNumberInRange(num) {
-    return num > 0 && num < 10;
+    return (num > 0) && (num < 10);
 }
 
 function advancedFilter(input) {
     var newArray = [];
 
-    if (Array.isArray()) {
+    if (Array.isArray(input)) {
 
         for (let i = 0; i < input.length; i++) {
 
