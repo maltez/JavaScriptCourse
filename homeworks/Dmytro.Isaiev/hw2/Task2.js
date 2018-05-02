@@ -4,10 +4,15 @@
  */
 function hourQuoter (minute) {
 
-    if (typeof minute != 'number') return 'data is not valid';
-    if (minute >= 60) return 'data is not valid';
-    if (minute < 0) return 'data is not valid';
-
+    if (typeof minute != 'number') { 
+        return 'data is not valid';
+    }
+    if (minute >= 60) { 
+        return 'data is not valid';
+    }
+    if (minute < 0) { 
+        return 'data is not valid';
+    }
     if (minute < 15) {
         return 'first quarter';
     } 

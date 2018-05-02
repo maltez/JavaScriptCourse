@@ -4,7 +4,7 @@
  * @returns {boolean} Returns devide first on second without remainder or not.
  */
 function isDevided(first, second) {
-    return first%second == 0;
+    return first%second === 0;
 }
 
 module.exports = isDevided;
