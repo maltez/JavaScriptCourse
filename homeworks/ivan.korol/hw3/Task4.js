@@ -4,57 +4,65 @@
  * @param {string} key key for encoding
  * @returns {Array<number>} Returns encoded array of numbers.
  */
+
 function encode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
-    var keyCodeArray = [];
-    var keyLowerCase = key.toLowerCase();
-    var stringLowerCase = input.toLowerCase();
-    var keyArray = keyLowerCase.split('');
-    var stringArray = stringLowerCase.split('');
     
-    for (let i = 0; i < stringArray.length; i++) {
-        let item = stringArray[i];
-        keygen(item, i, stringArray.length);
-    } 
-  
-    function keygen(letter, index, sum) {
+    if (typeof input !== 'string' || typeof key !== 'string') {
+        return false;
+    }
+    
+    var keyCodeArray = [];
+    var keyArray = key.toLowerCase().split('');
+    var stringArray = input.toLowerCase().split('');
+    var arrayItem;
+
+    function keyGen(letter, index) {
         for (let k = 0; k < keyArray.length; k++) {
-            if (letter === keyArray[k]) {
-                keyCodeArray.push(k + (sum + index));
+            
+            if (keyArray[k] === letter) {
+                arrayItem = keyArray.indexOf(letter,index) + 1;
+                return keyCodeArray.push(arrayItem);
             }
         }
     }
+      
+    for (let i = 0; i < stringArray.length; i++) {
+        keyGen(stringArray[i], i);
+    } 
 
     return keyCodeArray;
 }
-console.log(encode('штирлиц привет'));
 /**
  * Decode array of numbers to string by Stirlitz method
  * @param {Array<number>} input Array of numbers
  * @param {string} key key for decoding
  * @returns {string} Returns decoded string.
  */
+
 function decode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
-    var keyCodeArray = [];
-    var keyLowerCase = key.toLowerCase();
-    var keyArray = keyLowerCase.split('');
     
-    for (let i = 0; i < input.length; i++) {
-        let item = input[i];
-        keygen(item, i, input.length);
-    } 
-  
-    function keygen(num, index, sum) {
-        for (let k = 0; k < keyArray.length; k++) {
-            if (num === ((sum + index) + k)) {
-                keyCodeArray.push(keyArray[k]);
+    if (!Array.isArray(input) || typeof key !== 'string') {
+        return false;
+    }
+    
+    var letterArray = [];
+    var keyArray = key.toLowerCase().split('');
+
+    function letterGen(inputArr, keyArr, index) {
+        for (let m = 0; m < keyArr.length; m++) {
+            
+            if (inputArr[index] === (m + 1)) {
+                return letterArray.push(keyArr[m]);
             }
         }
     }
 
-    return keyCodeArray.join('');
-}
+    for (let n = 0; n < input.length; n++) {
+        letterGen(input, keyArray, n);
+    }
 
-console.log(decode([39, 34, 25, 34, 30, 28, 43, 54, 38, 40, 33, 27, 31, 46]));
+    return letterArray.join('');
+}
 
 module.exports = {
     encode,

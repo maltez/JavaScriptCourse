@@ -15,7 +15,7 @@ function advancedFilter(input) {
         for (let i = 0; i < input.length; i++) {
 
             if (!Number.isInteger(input[i])) {
-                return;
+                return false;
             }
         
             if (isNumberInRange(input[i])) {
@@ -26,7 +26,7 @@ function advancedFilter(input) {
         return newArray;
     }
 
-    return;
+    return false;
 }
 
 module.exports = advancedFilter;
