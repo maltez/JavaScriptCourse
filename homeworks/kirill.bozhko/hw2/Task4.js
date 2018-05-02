@@ -6,12 +6,14 @@
 function isDevided(first, second) {
     var result = first % second;
 
-    if (result === 0) {
-        return true;
+    if (typeof (first) === 'number' && typeof (second) === 'number') {
+        if (result === 0) {
+            return true;
+        }
+
+        else return false;
     }
-    else {
-        return false;
-    }
-}
+
+    else return;
 
 module.exports = isDevided;
