@@ -9,19 +9,19 @@
 //     return;
 // }
 
-var arr = [1, 2, 3, 4, 5, -5, -4, -3, -2, -1];
+// let array = [1, 2, 3, 4, 5, -5, -4, -3, -2, -1];
 
-function negativeFilter(array){
-    var newArr=[];
-    for (var i=0; i<array.length;i++){
-        if(isPositive(array[i])){
-            newArr.push (array[i]);
+function negativeFilter ( array ) {
+    let newArr = [];
+    for ( let i = 0; i < array.length; i++ ){
+        if ( isPositive ( array[i] ) ) {
+            newArr.push ( array[i] );
         }
       }
    return newArr;
  }
   
- function isPositive (number) {
+ function isPositive ( number ) {
    return number > 0;
  }
  
