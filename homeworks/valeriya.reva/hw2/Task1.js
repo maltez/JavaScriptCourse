@@ -7,7 +7,7 @@
 function stringBuilder(input) {
     var stringAllNum = '';
 
-    if (typeof(input) == 'number') {
+    if (typeof(input) === 'number') {
         if (input < 0){
             for (var i = 1; i >= input; i--) {
                 stringAllNum += i + ',';

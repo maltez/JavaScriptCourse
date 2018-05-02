@@ -8,7 +8,7 @@
 function isDevided(first, second) {
     var result = first % second;
 
-    if (typeof(first) == 'number' && typeof(second) == 'number' ) {
+    if (typeof(first) === 'number' && typeof(second) === 'number' ) {
 
         return result === 0;
 
