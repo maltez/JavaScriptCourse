@@ -5,11 +5,7 @@
  */
 function isDevided(first, second) {
     var rest = first % second;
-    if (rest != 0) {
-        return rest != 0;
-    } else {
-        return rest != 0;
-    }
+    return rest != 0;
 }
 
 isDevided();
