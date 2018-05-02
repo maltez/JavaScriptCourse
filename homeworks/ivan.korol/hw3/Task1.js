@@ -10,24 +10,18 @@ function isPositive(num) {
 }
 
 function negativeFilter(input) {
-    var newArray = [];
-
+    let newArray = [];
     if (Array.isArray(input)) {
-
-        for (let i = 0; i < input.length; i++) {
-
+        for (let i = 0; i < input.length; i += 1) {
             if (!Number.isInteger(input[i])) {
                 return false;
             }
-    
             if (isPositive(input[i])) {
                 newArray.push(input[i]);
             }
         }
-
         return newArray;
     }
-
     return false;
 }
 

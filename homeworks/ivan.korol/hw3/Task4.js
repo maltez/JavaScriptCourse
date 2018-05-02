@@ -6,32 +6,27 @@
  */
 
 function encode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
-    
     if (typeof input !== 'string' || typeof key !== 'string') {
         return false;
     }
-    
-    var keyCodeArray = [];
-    var keyArray = key.toLowerCase().split('');
-    var stringArray = input.toLowerCase().split('');
-    var arrayItem;
-
+    const keyArray = key.toLowerCase().split('');
+    const stringArray = input.toLowerCase().split('');
+    let arrayItem;
+    let keyCodeArray = [];
     function keyGen(letter, index) {
-        for (let k = 0; k < keyArray.length; k++) {
-            
+        for (let k = 0; k < keyArray.length; k += 1) {
             if (keyArray[k] === letter) {
-                arrayItem = keyArray.indexOf(letter,index) + 1;
+                arrayItem = keyArray.indexOf(letter, index) + 1;
                 return keyCodeArray.push(arrayItem);
             }
         }
     }
-      
-    for (let i = 0; i < stringArray.length; i++) {
+    for (let i = 0; i < stringArray.length; i += 1) {
         keyGen(stringArray[i], i);
     } 
-
     return keyCodeArray;
 }
+
 /**
  * Decode array of numbers to string by Stirlitz method
  * @param {Array<number>} input Array of numbers
@@ -40,27 +35,21 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
  */
 
 function decode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
-    
     if (!Array.isArray(input) || typeof key !== 'string') {
         return false;
     }
-    
-    var letterArray = [];
-    var keyArray = key.toLowerCase().split('');
-
+    const keyArray = key.toLowerCase().split('');
+    let letterArray = [];
     function letterGen(inputArr, keyArr, index) {
-        for (let m = 0; m < keyArr.length; m++) {
-            
+        for (let m = 0; m < keyArr.length; m += 1) {
             if (inputArr[index] === (m + 1)) {
                 return letterArray.push(keyArr[m]);
             }
         }
     }
-
-    for (let n = 0; n < input.length; n++) {
+    for (let n = 0; n < input.length; n += 1) {
         letterGen(input, keyArray, n);
     }
-
     return letterArray.join('');
 }
 
