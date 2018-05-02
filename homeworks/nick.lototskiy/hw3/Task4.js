@@ -62,12 +62,12 @@ function decode (arr, key){
      var decodedString=[];
        for (var i = 0; i<arr.length; i++){
        for (var j = 0; j<arrKey.length; j++){  
-         if (arr[i]===arrKey.indexOf(arrKey[j])){
-           decodedString.push(arrKey[j])
-         }
+        //  if (arr[i]===arrKey.indexOf(arrKey[j])){ What should be?
+        //    decodedString.push(arrKey[j])
+        //  }
         }
        }
      return decodedString;
    }
    
-   console.log (decode(arrForDecoding, stringKey));
+//    console.log (decode(arrForDecoding, stringKey));
