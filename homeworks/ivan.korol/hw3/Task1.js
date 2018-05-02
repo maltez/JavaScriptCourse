@@ -4,19 +4,23 @@
  * @returns {Array<number>} Returns array that contains positive numbers only.
  */
 
+
+function isPositive(num) {
+    return num >= 0;
+}
+
 function negativeFilter(input) {
+    var newArray = [];
 
     if (Array.isArray(input)) {
-        var newArray = [];
-        var error = 'invalid type';
 
-        for(var i = 0; i < input.length; i++) {
+        for (let i = 0; i < input.length; i++) {
 
-            if(!Number.isInteger(input[i])) {
-                return error;
+            if (!Number.isInteger(input[i])) {
+                return;
             }
     
-            if(isPositive(input[i])) {
+            if (isPositive(input[i])) {
                 newArray.push(input[i]);
             }
         }
@@ -24,11 +28,7 @@ function negativeFilter(input) {
         return newArray;
     }
 
-    return error;
-}
-
-function isPositive(num) {
-    return num >= 0;
+    return;
 }
 
 module.exports = negativeFilter;
