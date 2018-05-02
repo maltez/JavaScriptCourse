@@ -15,5 +15,6 @@ function isDevided(first, second) {
     }
 
     else return;
+}
 
 module.exports = isDevided;
