@@ -8,8 +8,8 @@
 // }
 
 function isPolindrome(input) {
-    input = input.toLowerCase().replace(/ /g, ''); //.replace()- delete spaces and ','
-    return input.split('').reverse().join('')==input; //don't need here ".toLowerCase() and .replace(/ /g, '') anymore,
+    input = input.toLowerCase().replace(/ /g, " "); //.replace()- delete spaces and ','
+    return input.split(" ").reverse().join(" ")==input; //don't need here ".toLowerCase() and .replace(/ /g, '') anymore,
      //because it's have already applied rewritten in 'input'
    }
       
