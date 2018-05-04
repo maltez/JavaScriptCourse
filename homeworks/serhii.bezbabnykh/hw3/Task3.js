@@ -17,7 +17,7 @@ function isPolindrome(input) {
 
     var result = inputString != inputStringReverse ? false : true;
 
-    return result;
+    return result; 
 }
 
 module.exports = isPolindrome;

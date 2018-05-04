@@ -6,6 +6,10 @@
 function advancedFilter(input) {
     var newarray = [];
 
+    if (typeof input === 'string') {
+        return;
+    }
+
     for (i=0; i < input.length; i ++) {
         if (typeof input[i] != 'number') {
             return;
@@ -13,7 +17,6 @@ function advancedFilter(input) {
             newarray.push(input[i]);
         }
     }
-
     return newarray;
 }
 
