@@ -5,11 +5,6 @@
  */
 
 
-// function negativeFilter(input) {
-//     return;
-// }
-
-
 function negativeFilter(array) {
   let newArr = [];
 
