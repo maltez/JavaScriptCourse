@@ -8,8 +8,8 @@ const moveZeros = function (arr) {
     if (!Array.isArray(arr)) {
         throw new Error('Error');
     }
-    let ZeroArray = arr.filter((item) => item === 0);
-    let noZeroArray = arr.filter((item) => item > 0);
+    const ZeroArray = arr.filter((item) => item === 0);
+    const noZeroArray = arr.filter((item) => item !== 0);
     return noZeroArray.concat(ZeroArray);
 }
 

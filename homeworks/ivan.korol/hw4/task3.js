@@ -9,7 +9,7 @@ const advancedFilter = (input) => {
     const divider1 = 3;
     const divider2 = 5;
     const divider3 = 7;
-    function getItem( currItem, divider) {
+    function getItem(currItem, divider) {
         let num = currItem;
         if (num < 0) {
             num = -currItem;
@@ -18,9 +18,8 @@ const advancedFilter = (input) => {
             num -= divider;
         }
         return num;
-    }
-    input.forEach((item, index) => {
-        
+    };
+    input.forEach((item) => {
         if (!getItem(item, divider3)) {
             newArr.push(item);
         } else if (!getItem(item, divider2)) {

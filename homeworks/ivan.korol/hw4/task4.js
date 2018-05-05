@@ -7,24 +7,23 @@
 
 const maxMin = (input, order = true) => {
     let result = 0;
-
     if (!Array.isArray(input)) {
         throw new Error('Error');
     }
     if (order) {
-        result = input.reduce((prevItem, curItem, index) => {
+        result = input.reduce((prevItem, curItem) => {
             if (prevItem < curItem) {
                 prevItem = curItem;
             }
             return prevItem;
-        })
+        });
     } else {
-        result = input.reduce((prevItem, curItem, index) => {
+        result = input.reduce((prevItem, curItem) => {
             if (prevItem > curItem) {
                 prevItem = curItem;
             }
             return prevItem;
-        })
+        });
     }
     return result;
 };
