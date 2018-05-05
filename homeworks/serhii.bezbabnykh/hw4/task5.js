@@ -3,19 +3,17 @@
  * @param {Array<number>} input
  * @returns {Array<number>} Returns filtered array.
  */
-const moveZeros = function (arr) {
-    let numberArr = arr.filter(function (number) {
+const moveZeros = function zero(arr) {
+    const numberArr = arr.filter(function first(number) {
         return number !== 0;
     });
 
-    let zeroArr = arr.filter(function (number) {
+    const zeroArr = arr.filter(function second(number) {
         return number === 0;
     });
 
-    let newArr = numberArr.concat(zeroArr); 
-    
+    const newArr = numberArr.concat(zeroArr);
     return newArr;
-}
+};
 
 module.exports = moveZeros;
-
