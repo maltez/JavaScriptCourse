@@ -18,6 +18,7 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
             if (keyArray[k] === letter) {
                 arrayItem = keyArray.indexOf(letter, index) + 1;
                 keyCodeArray.push(arrayItem);
+                break;
             }
         }
     }
@@ -44,6 +45,7 @@ function decode(input, key = 'абвгдеёжзийклмнопрстуфхцч
         for (let m = 0; m < keyArr.length; m += 1) {
             if (inputArr[index] === (m + 1)) {
                 letterArray.push(keyArr[m]);
+                break;
             }
         }
     }
