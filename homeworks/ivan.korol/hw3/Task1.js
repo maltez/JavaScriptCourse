@@ -10,11 +10,11 @@ function isPositive(num) {
 }
 
 function negativeFilter(input) {
-    let newArray = [];
+    const newArray = [];
     if (Array.isArray(input)) {
         for (let i = 0; i < input.length; i += 1) {
             if (!Number.isInteger(input[i])) {
-                return false;
+                throw new Error('error');
             }
             if (isPositive(input[i])) {
                 newArray.push(input[i]);
@@ -22,7 +22,7 @@ function negativeFilter(input) {
         }
         return newArray;
     }
-    return false;
+    throw new Error('error');
 }
 
 module.exports = negativeFilter;

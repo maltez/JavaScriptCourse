@@ -4,13 +4,8 @@
  * @returns {boolean} Returns is string polindroe or not.
  */
 function isPolindrome(input) {
-    let newInput;
-    let inputReverse;
-    if (Number.isInteger(input)) {
-        input = input.toString();
-    }
-    newInput = input.toLowerCase().replace(/\s/g, '');
-    inputReverse = newInput.split('').reverse().join('');
+    const newInput = input.toString().toLowerCase().replace(/\s/g, '');
+    const inputReverse = newInput.split('').reverse().join('');
     return newInput === inputReverse;
 }
 

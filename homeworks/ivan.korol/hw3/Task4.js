@@ -7,23 +7,23 @@
 
 function encode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
     if (typeof input !== 'string' || typeof key !== 'string') {
-        return false;
+        throw new Error('error');
     }
     const keyArray = key.toLowerCase().split('');
     const stringArray = input.toLowerCase().split('');
+    const keyCodeArray = [];
     let arrayItem;
-    let keyCodeArray = [];
     function keyGen(letter, index) {
         for (let k = 0; k < keyArray.length; k += 1) {
             if (keyArray[k] === letter) {
                 arrayItem = keyArray.indexOf(letter, index) + 1;
-                return keyCodeArray.push(arrayItem);
+                keyCodeArray.push(arrayItem);
             }
         }
     }
     for (let i = 0; i < stringArray.length; i += 1) {
         keyGen(stringArray[i], i);
-    } 
+    }
     return keyCodeArray;
 }
 
@@ -36,14 +36,14 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
 
 function decode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя ') {
     if (!Array.isArray(input) || typeof key !== 'string') {
-        return false;
+        throw new Error('error');
     }
     const keyArray = key.toLowerCase().split('');
-    let letterArray = [];
+    const letterArray = [];
     function letterGen(inputArr, keyArr, index) {
         for (let m = 0; m < keyArr.length; m += 1) {
             if (inputArr[index] === (m + 1)) {
-                return letterArray.push(keyArr[m]);
+                letterArray.push(keyArr[m]);
             }
         }
     }
