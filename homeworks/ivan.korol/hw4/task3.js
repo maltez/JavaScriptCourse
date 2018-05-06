@@ -3,7 +3,6 @@
  * @param {Array<number>} input
  * @returns {Array<number>} Returns filtered array.
  */
-
 const advancedFilter = (input) => {
     const newArr = [];
     const divider1 = 3;
@@ -18,7 +17,7 @@ const advancedFilter = (input) => {
             num -= divider;
         }
         return num;
-    };
+    }
     input.forEach((item) => {
         if (!getItem(item, divider3)) {
             newArr.push(item);
@@ -27,7 +26,6 @@ const advancedFilter = (input) => {
         } else if (!getItem(item, divider1)) {
             newArr.push(item);
         }
-        
     });
     return newArr;
 };

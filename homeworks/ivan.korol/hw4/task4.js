@@ -1,5 +1,7 @@
 /**
- * Return the highest number if second paraameter is true and the lowest number if parameter is false.
+ * Return the highest number if
+ * second paraameter is true and
+ * the lowest number if parameter is false.
  * @param {Array<number>} input
  * @param {boolean} order
  * @returns {number} Returns filtered array.
@@ -12,17 +14,21 @@ const maxMin = (input, order = true) => {
     }
     if (order) {
         result = input.reduce((prevItem, curItem) => {
-            if (prevItem < curItem) {
-                prevItem = curItem;
+            const currentItem = curItem;
+            let previosItem = prevItem;
+            if (previosItem < currentItem) {
+                previosItem = currentItem;
             }
-            return prevItem;
+            return previosItem;
         });
     } else {
         result = input.reduce((prevItem, curItem) => {
-            if (prevItem > curItem) {
-                prevItem = curItem;
+            const currentItem2 = curItem;
+            let previosItem2 = prevItem;
+            if (previosItem2 > currentItem2) {
+                previosItem2 = currentItem2;
             }
-            return prevItem;
+            return previosItem2;
         });
     }
     return result;

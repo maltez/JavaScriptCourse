@@ -6,13 +6,20 @@
  */
 const lowestMultiple = (num1, num2) => {
     let result = 0;
+    let item1 = num1;
+    let item2 = num2;
     function getDevisor() {
-        while (num1 !== 0 && num2 !== 0) {
-            num1 > num2 ? num1 %= num2 : num2 %= num1; 
+        while (item1 !== 0 && item2 !== 0) {
+            if (item1 > item2) {
+                item1 %= item2;
+            } else {
+                item2 %= item1;
+            }
         }
-        return num1 + num2;
+        const sum = item1 + item2;
+        return sum;
     }
-    result = (num1 * num2) / getDevisor(num1, num2);
+    result = (item1 * item2) / getDevisor(item1, item2);
     return result;
 };
 module.exports = lowestMultiple;
