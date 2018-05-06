@@ -6,7 +6,7 @@
 function stringBuilder(input) {
     let result = "" ;
 
-    if (typeof input !=== "Number"){
+    if (typeof input !=== "number"){
         return;
     } if (input > 0 ) {
         for (let i = 1; i <= input; i++){
