@@ -19,7 +19,7 @@ function stringBuilder(input) {
           console.log(strMinus);
       }
   } else {
-      console.log("Enter a number!")
+      console.log("Enter a number!") 
   }
 };
 
