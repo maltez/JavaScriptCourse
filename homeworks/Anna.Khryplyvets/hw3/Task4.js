@@ -19,16 +19,19 @@ function encode(input, key = "абвгдеёжзийклмнопрстуфхцч
     var ln1 = arr1.length;
     var ln2 = arr2.length;
 
+    var index = 1;
+
     function getNumber(value){
-        for(var i = 1; i < ln2; i += 1) {
+        for(var i = index; i < ln2; i += 1) {
             if(value === arr2[i]) {
-                return result.push(i);
+                result.push(i);
+                return index = i + 1;
             }
         }
     }
 
-    for(var i = 1; i < ln1; i += 1){
-        cache = arr1[i].toLowerCase();
+    for(var j = 1; j < ln1; j += 1){
+        cache = arr1[j].toLowerCase();
         getNumber(cache);
     }
     return result;
