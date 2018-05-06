@@ -16,17 +16,20 @@ function encode(input, key = "абвгдеёжзийклмнопрстуфхцч
     var cache;
     var result = [];
 
-    function getNumber(value, array){
-        for(var i = 1; i < array.length; i += 1) {
-            if(value === array[i]) {
-                return i;
+    var ln1 = arr1.length;
+    var ln2 = arr2.length;
+
+    function getNumber(value){
+        for(var i = 1; i < ln2; i += 1) {
+            if(value === arr2[i]) {
+                return result.push(i);
             }
         }
     }
 
-    for(var i = 1; i < arr1.length; i += 1){
+    for(var i = 1; i < ln1; i += 1){
         cache = arr1[i].toLowerCase();
-        result.push(getNumber(cache, arr2));
+        getNumber(cache);
     }
     return result;
 }
