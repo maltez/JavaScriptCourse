@@ -1,20 +1,12 @@
 
-/**
- * Check negative numbers
- * @param {number} num
- * @returns {string} Returns true or false.
- */
+// Check negative numbers
 
 function isPositive(num) {
     if(typeof num === 'number' && !isNaN(num)) {
-        if(num > 0){
-            return num > 0;
-        }
-        return num > 0; 
-    } else {
-        return (typeof num === 'number' && !isNaN(num));
-    }   
-}
+        return num >= 0;
+    }
+    throw new Error();
+};
 
 /**
  * Filter negative numbers from array
@@ -22,7 +14,7 @@ function isPositive(num) {
  * @returns {Array<number>} Returns array that contains positive numbers only.
  */
 
-var input = [1, -4, 5, 7, -11];
+var input = [1,2,3,4,5,6,7,8,9,-1,-2,-3,-4,-5,-6,-7,-8,0];
 
 function negativeFilter(input) {
     var arr = [];
@@ -35,9 +27,6 @@ function negativeFilter(input) {
     return arr; 
 }
 
-negativeFilter();
+negativeFilter(input);
 
-module.exports = {
-    isPositive,
-    negativeFilter,
-};
+module.exports = negativeFilter;

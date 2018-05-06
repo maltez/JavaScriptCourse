@@ -3,18 +3,16 @@
  * @param {string} input
  * @returns {boolean} Returns is string polindroe or not.
  */
-var input = 'атата';
-function isPalindrome(input) {
-    var str = input;
-    var strReverse = input.split('').reverse().join('');
+var input = 'А Роза упалА на лапу азора';
+function isPolindrome(input) {
+
+    var str = input.split(',').splice(' ').join('').replace( /\s/g, "").toLowerCase();
+    var strReverse = str.split('').reverse().join('').toLowerCase();
         
-    if (strReverse == str) {
-      return 'yes';
-    } 
-    return 'no';
+    return strReverse == str;
 }
 
-isPalindrome();
+isPolindrome(input);
 
 module.exports = isPolindrome;
 

@@ -1,19 +1,11 @@
-/**
- * Check if number > 0 and < 10
- * @param {number} num
- * @returns {string} Returns true or false.
- */
+// Check if number > 0 and < 10
 
 function isNumberInRange(num) {
     if(typeof num === 'number' && !isNaN(num)) {
-        if(num > 0 && num < 10) {
-            return (num > 0 && num < 10);
-        }
         return (num > 0 && num < 10);
-    } else {
-        return (typeof num === 'number' && !isNaN(num));
-    }   
-}
+    }
+    throw new Error();
+};
 
 /**
  * Filter array. Only numbers that greater than 0 and less then 10 pass to result.
@@ -25,18 +17,14 @@ var input = [1, -4, 5, 7, -11];
 
 function advancedFilter(input) {
     var arr = [];
-    
-        for(var i = 0; i < input.length; i++){
-            if(isNumberInRange(input[i])){
-                arr.push(input[i]);
-            }
+    for(var i = 0; i < input.length; i++){
+        if(isNumberInRange(input[i])){
+            arr.push(input[i]);
         }
-        return arr; 
+    } 
+    return arr;   
 }
 
-advancedFilter();
+advancedFilter(input);
 
-module.exports = {
-    isNumberInRange,
-    advancedFilter,
-};
+module.exports = advancedFilter;

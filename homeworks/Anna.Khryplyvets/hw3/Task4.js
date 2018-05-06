@@ -10,26 +10,30 @@ var input = "Буря мглою недо кроет, вихри снежные 
 function encode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ") {
     var arr1 = input.split('');
     var arr2 = key.split('');
+    arr1.unshift(null);
+    arr2.unshift(null);
     var cache;
+    var j = 1;
+
     var result = [];
 
     var ln1 = arr1.length;
     var ln2 = arr2.length;
-    
-    for(var i = 0; i < ln1; i++){
+
+    for(var i = 1; i < ln1; i += 1){
         cache = arr1[i].toLowerCase();
-        
-        for(var j = 0; j < ln2; j++){
-            if(cache == arr2[j].toLowerCase()){
-                var num = j;
-                result.push(num);
-            }
+
+        if (cache == arr2[j]){
+            result.push(j);
+            j += 1;
+        } else {
+            j += 1;
         }
     }
     return result;
 }
 
-encode();
+encode(input);
 
 /**
  * Decode array of numbers to string by Stirlitz method
@@ -38,10 +42,10 @@ encode();
  * @returns {string} Returns decoded string.
  */
 
-var input = "16,17,9,2,5,19";
+var input = [1,2,3,4,5,6,7,8,9];
 
 function decode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ") {
-    var arr1 = input.split(',');
+    var arr1 = input;
     var arr2 = key.split('');
     var cache;
     var cache2;
@@ -51,14 +55,14 @@ function decode(input, key = "абвгдеёжзийклмнопрстуфхцч
     
     for(var i = 0; i < ln1; i++){
         cache = arr1[i];
-        cache2 = arr2[cache];
+        cache2 = arr2[cache - 1];
         result.push(cache2);
     }
 
     return result.join('').toString();
 }
 
-decode();
+decode(input);
 
 module.exports = {
     encode,
