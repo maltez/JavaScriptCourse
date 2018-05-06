@@ -22,7 +22,7 @@ describe('Test suite for Lowest Common Multiple', () => {
     });
 
     it('Input 396 and 180 expext 1980', () => {
-        const input1 = 296;
+        const input1 = 396;
         const input2 = 180;
         const expectedResult = 1980;
 
