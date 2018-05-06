@@ -1,30 +1,28 @@
-
-// Check negative numbers
-
-function isPositive(num) {
-    if(typeof num === 'number' && !isNaN(num)) {
-        return num >= 0;
-    }
-    throw new Error();
-};
-
 /**
  * Filter negative numbers from array
  * @param {Array<number>} input
  * @returns {Array<number>} Returns array that contains positive numbers only.
  */
 
-var input = [1,2,3,4,5,6,7,8,9,-1,-2,-3,-4,-5,-6,-7,-8,0];
+var input = [1, 2, 3, 4, 5, 6, 7, 8, 9, -1, -2, -3, -4, -5, -6, -7, -8, 0];
 
-function negativeFilter(input) {
+// Check negative numbers
+function isPositive(num) {
+    if (typeof num === 'number') {
+        return num >= 0;
+    }
+    throw new Error();
+}
+
+function negativeFilter(array) {
     var arr = [];
 
-    for(var i = 0; i < input.length; i++){
-        if(isPositive(input[i])){
-            arr.push(input[i]);
+    for (var i = 0; i < array.length; i += 1) {
+        if (isPositive(array[i])) {
+            arr.push(array[i]);
         }
     }
-    return arr; 
+    return arr;
 }
 
 negativeFilter(input);
