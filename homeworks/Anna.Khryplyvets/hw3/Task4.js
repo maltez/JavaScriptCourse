@@ -12,23 +12,21 @@ function encode(input, key = "абвгдеёжзийклмнопрстуфхцч
     var arr2 = key.split('');
     arr1.unshift(null);
     arr2.unshift(null);
-    var cache;
-    var j = 1;
 
+    var cache;
     var result = [];
 
-    var ln1 = arr1.length;
-    var ln2 = arr2.length;
-
-    for(var i = 1; i < ln1; i += 1){
-        cache = arr1[i].toLowerCase();
-
-        if (cache == arr2[j]){
-            result.push(j);
-            j += 1;
-        } else {
-            j += 1;
+    function getNumber(value, array){
+        for(var i = 1; i < array.length; i += 1) {
+            if(value === array[i]) {
+                return i;
+            }
         }
+    }
+
+    for(var i = 1; i < arr1.length; i += 1){
+        cache = arr1[i].toLowerCase();
+        result.push(getNumber(cache, arr2));
     }
     return result;
 }
