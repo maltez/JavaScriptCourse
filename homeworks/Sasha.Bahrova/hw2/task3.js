@@ -1,21 +1,15 @@
-@ -0,0 +1,7 @@
 /**
- * @param {number} minute
- * @returns {number} Returns the quoter based on input.
+ * @param {number} hours
+ * @returns {number} Returns count of seconds in input hours.
  */
-function hourQuoter (minute) {
- if (typeof minute !== "number"){
+function secondsCount(hours) {
+ if(typeof hours !=="number"){
    return;
- }else if (minute >= 0 && minute <= 14) {
-   return 1;
- }else if (minute >= 15 && minute <= 30) {
-   return 2;
- }else if (minute >= 31 && minute <= 45) {
-   return 3;
- }else if (minute >= 46 && minute <= 59) {
-   return 4;
+ }else if(hours>0){
+   return secondsCount(hours*3600);
  }else{
-   return false;
+   return;
  }
 }
-module.exports = hourQuoter;
+
+module.exports = secondsCount;
