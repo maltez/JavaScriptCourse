@@ -15,9 +15,9 @@ function isPositive(num) {
 }
 
 function negativeFilter(array) {
-    var arr = [];
+    const arr = [];
 
-    for (var i = 0; i < array.length; i += 1) {
+    for (let i = 0; i < array.length; i += 1) {
         if (isPositive(array[i])) {
             arr.push(array[i]);
         }
