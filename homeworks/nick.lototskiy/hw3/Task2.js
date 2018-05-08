@@ -3,8 +3,18 @@
  * @param {Array<number>} input
  * @returns {Array<number>} Returns filtered array.
  */
-function advancedFilter(input) {
-    return;
+
+function advancedFilter(array) {
+    function isNumberInRange(number) {
+      return number<10 && number>0;
+    }
+    var newArr = [];
+      for(var i=0; i<array.length; i++) {
+        if (isNumberInRange(array[i])) {
+          newArr.push(array[i]);
+        }
+       }
+    return newArr;
 }
 
 module.exports = advancedFilter;
