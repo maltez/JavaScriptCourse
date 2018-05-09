@@ -3,24 +3,25 @@
  * @param {number} input
  * @returns {string} Returns the string from 1 to input.
  */
-function stringBuilder(input) {
-  if (typeof input === 'number' && input >= 1) {
-      var str = '';
-      var i;
-      for (i = 1; i < input; i++) {
-          str += i + ", ";
-          console.log(str + Number(i + 1));
-      }
-  } else if (typeof input === 'number' && input < 1) {
-      var strMinus = '';
-      var j;
-      for (j = 1; j > input - 1; j--) {
-          strMinus += j + ", ";
-          console.log(strMinus);
-      }
-  } else {
-      console.log("Enter a number!") 
-  }
-};
+ function stringBuilder(input) {
+     if (typeof input === 'number' && input >= 1) {
+         var str = '';
+
+         for (var i = 1; i < input; i++) {
+             str += i + ", ";
+         }
+         return (str + input);
+     } else if (typeof input === 'number' && input < 1) {
+         var strMinus = '';
+
+         for (var j = 1; j > input; j--) {
+             strMinus += j + ", ";
+         }
+         return (strMinus + input);
+     } else {
+       // This console.log is just an information for correct input
+         console.log("Enter a number!")
+     }
+ };
 
 module.exports = stringBuilder;
