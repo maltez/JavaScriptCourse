@@ -6,10 +6,10 @@
  */
 function isDevided(first, second) {
  var result = first%second;
- if(result === 0){
-   return true;
- }else{
+ if(typeof(first) !== "number" && typeof(second) !=="number"){
    return false;
+ }else{
+   return result === 0;
  }
 }
 
