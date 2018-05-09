@@ -8,6 +8,7 @@ function moveZeros(arr) {
     if (!Array.isArray(arr)) {
         throw new Error('Error');
     }
+    
     const ZeroArr = arr.filter((item) => item === 0);
     const noZeroArr = arr.filter((item) => item !== 0);
     return noZeroArr.concat(ZeroArr);
