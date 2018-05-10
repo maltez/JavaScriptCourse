@@ -17,11 +17,11 @@
  */
 const decrypt = (encryptedText, n) => {
     let inputArray = encryptedText.split('');
-    let evenArray = [];
-    let oddArray = [];
-    let newArray;
+    
 
     function cript() {
+        let evenArray = [];
+        let oddArray = [];
 
         for (let i = 0; i < inputArray.length; i++) {
             if (i % 2 > 0) {
@@ -37,29 +37,15 @@ const decrypt = (encryptedText, n) => {
     
         let evenArraystr = evenArray.join('');
         let oddArraystr = oddArray.join('');
-        newArray = evenArraystr + oddArraystr;    
-        return newArray;
+        inputArray = evenArraystr + oddArraystr;    
     }
 
-    cript();
-    console.log('-----------');
-    cript();
+    while (n) {
+        cript();
+        n--;
+    }
 
-    // while (n) {
-    //     cript(newArray);
-    //     n--;
-    // }
-
-    console.log(newArray);
-
-    
-
-    
-
-    // console.log(encryptedText);
-    // console.log(evenArraystr);
-    // console.log(oddArraystr);
-    // console.log(newArray);
+    console.log(inputArray);
     return;
 }
 
