@@ -11,16 +11,13 @@
              str += i + ", ";
          }
          return (str + input);
-     } else if (typeof input === 'number' && input < 1) {
+     } else {
          var strMinus = '';
 
          for (var j = 1; j > input; j--) {
              strMinus += j + ", ";
          }
          return (strMinus + input);
-     } else {
-       // This console.log is just an information for correct input
-         console.log("Enter a number!")
      }
  };
 
