@@ -18,8 +18,7 @@ const advancedFilter = (input) => {
         }
         return num;
     }
-    input.forEach((item, index) => {
-        
+    input.forEach((item) => {
         if (!getItem(item, divider3)) {
             newArr.push(item);
         } else if (!getItem(item, divider2)) {
@@ -27,7 +26,6 @@ const advancedFilter = (input) => {
         } else if (!getItem(item, divider1)) {
             newArr.push(item);
         }
-        
     });
     return newArr;
 };

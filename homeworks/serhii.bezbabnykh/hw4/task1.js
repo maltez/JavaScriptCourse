@@ -6,15 +6,17 @@
  */
 
 const commonDevisor = (num1, num2) => {
-    while (num1 !== 0 && num2 !== 0) {
-        if (num1 > num2) {
-            num1 %= num2;
+    let a = num1;
+    let b = num2;
+    while (a !== 0 && b !== 0) {
+        if (a > b) {
+            a %= b;
         } else {
-            num2 %= num1;
+            b %= a;
         }
     }
 
-    const divider = num1 + num2;
+    const divider = a + b;
 
     return divider;
 };
