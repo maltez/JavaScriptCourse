@@ -4,21 +4,20 @@
  * @returns {string} Returns the string from 1 to input.
  */
  function stringBuilder(input) {
-     if (typeof input === 'number' && input >= 1) {
-         var str = '';
+     var str = '';
 
+     if (typeof input !== "number") {
+         return;
+     } else if (input >= 1) {
          for (var i = 1; i < input; i++) {
              str += i + ", ";
          }
-         return (str + input);
      } else {
-         var strMinus = '';
-
-         for (var j = 1; j > input; j--) {
-             strMinus += j + ", ";
+         for (var i = 1; i > input; i--) {
+             str += i + ", ";
          }
-         return (strMinus + input);
      }
+     return (str + input);
  };
 
 module.exports = stringBuilder;
