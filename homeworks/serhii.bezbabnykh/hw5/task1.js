@@ -6,7 +6,41 @@
  */
 
  const encrypt = (text, n) => {
-     return
+    let inputArray = text.split('');
+    
+
+    function cript() {
+        let evenArray = [];
+        let oddArray = [];
+
+        for (let i = 0; i < inputArray.length; i++) {
+            if (i % 2 > 0) {
+                evenArray.push(inputArray[i]);
+            }
+        }
+    
+        for (let i = 0; i < inputArray.length; i++) {
+            if (i % 2 === 0) {
+                oddArray.push(inputArray[i]);
+            }
+        }
+    
+        let evenArraystr = evenArray.join('');
+        let oddArraystr = oddArray.join('');
+        inputArray = evenArraystr + oddArraystr;    
+    }
+
+    if (n != 0) {
+        while (n) {
+            cript();
+            n--;
+        }
+    } else {
+        return text;
+    }
+
+    // console.log(inputArray);
+    return;
  };
 
 /**
@@ -40,15 +74,21 @@ const decrypt = (encryptedText, n) => {
         inputArray = evenArraystr + oddArraystr;    
     }
 
-    while (n) {
-        cript();
-        n--;
+    if (n != 0) {
+        while (n) {
+            cript();
+            n--;
+        }
+    } else {
+        return encryptedText;
     }
 
-    console.log(inputArray);
+    // console.log(inputArray);
     return;
 }
 
-decrypt('This is a test!', 2);
+// decrypt('This is a test!', 0);
+
+// encrypt('s eT ashi tist!', 0);
 
 module.exports = { encrypt , decrypt };
