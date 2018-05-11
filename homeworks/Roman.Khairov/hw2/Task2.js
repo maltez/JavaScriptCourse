@@ -13,7 +13,7 @@ function hourQuoter (minute) {
       } else if (minute <= 45) {
           return ("third quater");
       } else {
-          return ("fifth quater");
+          return ("fourth quater");
       }
   } else {
       return;
