@@ -5,20 +5,27 @@
  */
 function advancedFilter(input) {
 
+    if (!Array.isArray(input)) {
+
+        return 'data is not valid';
+    }
+
     function isNumberInRange(massdata) {
-        return (massdata > 0 && massdata < 10) 
+
+        return (massdata > 0 && massdata < 10)
     }
     var result = [];
     
     for (var i = 0; i < input.length; i++) {
+
         if (isNumberInRange(input[i]) === true) {
-            result.push(input[i]);  
+            result.push(input[i]);
         }
     }
-    return result;  
+    return result;
 }
 
-alert(advancedFilter([1, 2, 3, 11, 22, 33, 44 ,50]));
+console.log(advancedFilter("1, 2, 3, 11, 22, 33, 44 ,50"));
 
 
 

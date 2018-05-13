@@ -9,16 +9,16 @@ function negativeFilter(input) {
     var result = [];
 
     function isPositive(massdata) {
-        return (massdata%2 === 0);
+        return (massdata >= 0);
     }
     for (var i = 0; i < input.length; i++) {
-        if (isPositive(input[i]) === true) {           
+        if (isPositive(input[i])) {
             result.push(input[i]);
         }
     }
-    return result;  
+    return result;
 }
-alert(negativeFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44 ,50]));
+console.log(negativeFilter([6,7,8,9,-1,-2,-3,-4,-5,-6,-7,-8,0]));
 
 
 

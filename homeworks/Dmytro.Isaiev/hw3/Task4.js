@@ -4,9 +4,9 @@
  * @param {string} key key for encoding
  * @returns {Array<number>} Returns encoded array of numbers.
  */
-function encode(input, key) {
+function encode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
 
-    if (typeof(input) !== 'string' || typeof(key) !== 'string') {       
+    if (typeof(input) !== 'string' || typeof(key) !== 'string') {
         return 'data is not valid';
     }
 
@@ -14,7 +14,7 @@ function encode(input, key) {
 
     for (var i = 0; i < input.length; i++) {
         var currentItem = input[i].toLowerCase();
-        var encodedItem = key.indexOf(currentItem);
+        var encodedItem = key.indexOf(currentItem) + 1;
         codeArr.push(encodedItem);
     }
 
@@ -27,7 +27,7 @@ function encode(input, key) {
  * @param {string} key key for decoding
  * @returns {string} Returns decoded string.
  */
-function decode(input, key) {
+function decode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
 
     if (typeof(key) !== 'string') {       
         return 'data is not valid';
@@ -36,14 +36,14 @@ function decode(input, key) {
     var result = "";
 
     for (var i = 0; i < input.length; i++) {
-        var encodedCharIndex = input[i];
+        var encodedCharIndex = input[i] - 1;
         result += key[encodedCharIndex];
     }
     
     return result;
 }
 
-alert(decode(encode("Буря мглою небо кроет, вихри снежные крутя, то как зверь она завоет то заплачет как дитя" , "123вбагдеёжзийклмнопрс туф,хцчшщъыьэюя") , "123вбагдеёжзийклмнопрс туф,хцчшщъыьэюя"));
+console.log(decode(encode("АбВгдеёЖЗ")));
 
 
 module.exports = {
