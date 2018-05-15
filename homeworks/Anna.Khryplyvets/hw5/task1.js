@@ -6,25 +6,20 @@
  */
 
 const encrypt = (text, n) => {
-    if(text === null || text === '' || n <= 0){
+    if (text === null || text === '' || n <= 0) {
         return text;
     }
-    
+
     let str = text.split('');
-    let newStr = '';
     let everySecondChar = [];
     let everyNosecondChar = [];
 
-    for(let i = 0; i < n; i += 1){
-        everySecondChar = str.filter(function(item, index) {
-            return index % 2 !== 0;
-        });
-        everyNosecondChar = str.filter(function(item2, index2) {
-            return index2 % 2 === 0;
-        });
+    for (let i = 0; i < n; i += 1) {
+        everySecondChar = str.filter((item, index) => index % 2 !== 0);
+        everyNosecondChar = str.filter((item2, index2) => index2 % 2 === 0);
         str = everySecondChar.concat(everyNosecondChar);
     }
-    return newStr = str.join('');
+    return str.join('');
 };
 
 /**
@@ -34,37 +29,35 @@ const encrypt = (text, n) => {
  * @returns {string} Returns Decrypted string.
  */
 const decrypt = (encryptedText, n) => {
-    if(encryptedText === null || encryptedText === '' || n <= 0){
+    if (encryptedText === null || encryptedText === '' || n <= 0) {
         return encryptedText;
     }
+
     let str = encryptedText.split('');
-    let newStr = '';
+    function getDecrypt(array) {
+        const curArr = array;
+        const newArr = [];
+        const ln = Math.floor(curArr.length / 2);
+        const oddArr = curArr.slice(ln);
+        const evenArr = curArr.splice(0, ln);
 
-    for(let i = 0; i < n; i += 1){
-        str = getDecrypt(str);
-    }
-
-    function getDecrypt(array){
-        let curArr = array;
-        let newArr = [];
-        let ln = Math.floor(curArr.length / 2);
-        let oddArr = curArr.slice(ln);
-        let evenArr = curArr.splice(0, ln);
-
-        for(let i = 0; i < oddArr.length; i += 1){
-            let oddItem = oddArr[i];
-            let evenItem = evenArr[i];
+        for (let i = 0; i < oddArr.length; i += 1) {
+            const oddItem = oddArr[i];
+            const evenItem = evenArr[i];
             newArr.push(oddItem, evenItem);
         }
 
-        if(newArr.length > curArr.length){
+        if (newArr.length > curArr.length) {
             newArr.pop();
-        } 
+        }
 
         return newArr;
     }
 
-    return newStr = str.join('');
-}
+    for (let i = 0; i < n; i += 1) {
+        str = getDecrypt(str);
+    }
+    return str.join('');
+};
 
-module.exports = { encrypt , decrypt };
+module.exports = { encrypt, decrypt };
