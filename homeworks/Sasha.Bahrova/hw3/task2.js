@@ -6,14 +6,16 @@
 function advancedFilter(input) {
     var newArray = [];
     function isNumberInRange(i) {
-    if (i > 0) {
+    if (i > 0 && i < 10) {
       return true;
-    }else{
-      return false;
-    };
-    for(i > 0; i < 10; i++) {
-      if(isNumberInRange(i) == true) {
-        newArray.push(i);
+    }
+  };
+  for(var i = 0; i < input.length; i++) {
+    if(isNaN(input[i])){
+      throw new Error('Input not a number');
+    }
+    if(isNumberInRange(input[i])) {
+      newArray.push(input[i]);
       }
     }
     return newArray;
