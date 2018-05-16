@@ -1,8 +1,7 @@
 {
-  "name": "hw3",
+  "name": "hw4",
   "version": "1.0.0",
   "description": "",
-  "main": "Task1.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint *.js",
     "test": "./node_modules/.bin/jest ./test/*.test.js --watch"
