@@ -1,26 +1,28 @@
 /**
-* Filter negative numbers from array
-* @param {Array<number>} input
-* @returns {Array<number>} Returns array that contains positive numbers only.
-*/
+ * Filter negative numbers from array
+ * @param {Array<number>} input
+ * @returns {Array<number>} Returns array that contains positive numbers only.
+ */
+
+
+function isPositive(num) {
+    return num >= 0;
+}
+
 function negativeFilter(input) {
-    var newarray = [];
-    var error = 'Error';
-
-    for (i=0; i < input.length; i++) {
-        if (typeof input[i] != 'number') {
-            return error;
-        } else if (isPositive(input[i])) {
-            newarray.push(input[i]);
+    const newArray = [];
+    if (Array.isArray(input)) {
+        for (let i = 0; i < input.length; i += 1) {
+            if (!Number.isInteger(input[i])) {
+                throw new Error('error');
+            }
+            if (isPositive(input[i])) {
+                newArray.push(input[i]);
+            }
         }
+        return newArray;
     }
-
-    return newarray;
+    throw new Error('error');
 }
-
-function isPositive(number) {
-    return number >= 0;
-}
-
 
 module.exports = negativeFilter;

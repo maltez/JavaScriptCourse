@@ -4,20 +4,9 @@
  * @returns {boolean} Returns is string polindroe or not.
  */
 function isPolindrome(input) {
-    var inputString;
-    var inputStringReverse;
-
-    inputString = input.toLowerCase();
-    
-    inputString = inputString.replace(/\,| |\!|\./g, "");
-
-    inputStringReverse = inputString.split('');
-    inputStringReverse = inputStringReverse.reverse();
-    inputStringReverse = inputStringReverse.join('');
-
-    var result = inputString != inputStringReverse ? false : true;
-
-    return result; 
+    const newInput = input.toString().toLowerCase().replace(/\s/g, '');
+    const inputReverse = newInput.split('').reverse().join('');
+    return newInput === inputReverse;
 }
 
 module.exports = isPolindrome;
