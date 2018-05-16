@@ -10,8 +10,11 @@ function negativeFilter(input) {
             return true;
         }
     }
-    for (let i = 0; i < input.length; i += 1) {
-        while (isPositive (i)) === true) {
+    for (let i = 0; i < input.length; i++) {
+        if(isNaN(input[i])){
+            throw new Error('Input not a number');
+        }
+        if (isPositive(input[i])) {
             newArray.push(input[i]);
         }
     }
