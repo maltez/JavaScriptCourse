@@ -5,9 +5,24 @@
  * @returns {string} Returns Encrypted string.
  */
 
- const encrypt = (text, n) => {
-     return
- };
+const encrypt = function (text, n){
+    if (typeof text !== 'string' || !text){
+      return "This is a test!"
+    }
+    let textArr = text.split('');
+    let determineEven = function(item, i){
+        return (i%2==0)
+      };
+    let determineUneven = function(item, i){
+        return (i%2!==0)
+    };
+    
+     for (let i = 0; i < n; i+=1){
+        textArr = textArr.filter(determineUneven).concat(textArr.filter(determineEven))
+    }
+    return textArr.join('')
+  }
+
 
 /**
  * String encription
