@@ -4,34 +4,28 @@
  * @param {string} key key for encoding
  * @returns {Array<number>} Returns encoded array of numbers.
  */
-function encode(input, key= "абвгдеёжзийклмнопрстуфхцчшщъыьэюя, "){
+function encode(input, key = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя, "){
   let arrPhrase = input.toLowerCase().split('');
   let arrKey = key.split(''); 
   let encodedArr = [];
   let finalCode = [];
 
   function getCode (arrPhrase, arrKey){
-   for (let i = 0; i<arrPhrase.length; i++){
-    for (let j = 0; j<arrKey.length; j++){
-      if (arrPhrase[i]===arrKey[j]){
-        encodedArr.push(j+1)
-      }    
+   for (let i = 0; i<arrPhrase.length; i+=1){
+     let arrPhraseItem = arrPhrase[i];
+      for (let j = 0; j<arrKey.length; j+=1){
+        if (arrPhraseItem==arrKey[j]){
+          encodedArr.push(i+1);
+          break;
+        }    
      }
    }
      return encodedArr;
   }
-  let final;
-  final = getCode(arrPhrase, arrKey);
+  let final = getCode(arrPhrase, arrKey);
+  return final
  
-function getfinalCode(final){
-    let finalArr =[];
-    for (let k = 0; k<final.length; k+=1){
-      finalArr.push(k+1)
-    }
-    return finalArr
-  }
-    return getfinalCode(final).join(' ');
-}
+
 
 
 /**
