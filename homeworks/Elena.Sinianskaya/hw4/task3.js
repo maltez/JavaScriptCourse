@@ -14,9 +14,7 @@
 
 const advancedFilter = (input) => {
     const array = input;
-    const result = array.filter (function (item) {
-        return (item % 3 === 0 || item % 5 === 0 || item % 7 === 0);
-    });
+    const result = array.filter(item => item % 3 === 0 || item % 5 === 0 || item % 7 === 0);
     return result;
 };
 

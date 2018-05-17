@@ -4,7 +4,7 @@
  * @returns {Array<number>} Returns filtered array.
  */
 
-const moveZeros = function (arr) {
+const moveZeros = (arr) => {
     const result = [];
     const resultZero = [];
     for (let i = 0; i < arr.length; i += 1) {
@@ -16,6 +16,5 @@ const moveZeros = function (arr) {
     }
     return result.concat(resultZero);
 };
-
 
 module.exports = moveZeros;

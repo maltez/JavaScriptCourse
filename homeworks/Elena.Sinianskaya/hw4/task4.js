@@ -7,12 +7,11 @@
  */
 
 const maxMin = (input, order = true) => {
-    const result = input.reduce (function (sum, current) {
+    const result = input.reduce((acc, current) => {
         if (order === true) {
-            return (sum > current) ? sum : current;
-        } else {
-            return (sum > current) ? current : sum;
+            return (acc > current) ? acc : current;
         }
+        return (acc > current) ? current : acc;
     }, 0);
     return result;
 };
