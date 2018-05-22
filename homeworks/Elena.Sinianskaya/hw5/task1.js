@@ -23,26 +23,31 @@ const encrypt = function (text, n){
   return textArr.join('')
 }
 
-const decrypt = function (encryptedText, n){
+const decrypt = (encryptedText, n) => {
   if (typeof encryptedText !== 'string' || !encryptedText) {
        return encryptedText;
    }
-  
-  function fn() {
    let arrText = encryptedText.split('');
-   let firstPart = arrText.slice (0, (arrText.length/2));
-   let secondPart = arrText.slice ((arrText.length/2), (arrText.length));
-   let finalArray = [];
-   for(let h = 0; h<(firstPart.length)+1; h+=1){
-     finalArray.push(secondPart[h], firstPart[h])//запушить в новый массив элементы через один (один элемент с одного массива, другой - с другого)
-   }
+   function getFinalArr() {
+       const firstPart = arrText.slice(0, arrText.length / 2);
+       const secondPart = arrText.slice(arrText.length / 2);
+       
+       const finalArray = [];
+       for (let i = 0; i < secondPart.length; i += 1) {
+           finalArray.push(secondPart[i], firstPart[i]);
+       }
+       if (finalArray.length > arrText.length) { 
+           finalArray.pop();
+       }
+       arrText = finalArray;
+       return arrText;
   
-   return finalArray
+    }
+   for (let j = 0; j < n; j += 1) {
+       getFinalArr();
    }
- let getArr =  fn()
- return  getArr.join('')
-}
-
+   return arrText.join('');
+ };
 
 
 
