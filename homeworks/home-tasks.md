@@ -81,3 +81,17 @@
             The returned format must be correct in order to complete this challenge. 
             Don't forget the space after the closing parentheses!
 
+<<<<<<< HEAD
+=======
+# Homework #6
+- Given text with tags create object structure where key - the tag name, value - tag value. Nested tags are allowed. Dublicated tag names on the same level are forbiden.(Use regexp)
+- In object cretated in part 1 create function render() - that create from object fields html page.
+- Create function that check and recognize(define the type) input text. Type can be - email, text, number, telephone
+- Write a function toWeirdCase that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
+
+    The passed in string will only consist of alphabetical characters and spaces(' '). Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
+
+    Examples:
+    toWeirdCase( "String" );//=> returns "StRiNg"
+    toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
+>>>>>>> 0cb29c072725a625711a24cc1edf494336ef5798
