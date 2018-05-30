@@ -81,8 +81,6 @@
             The returned format must be correct in order to complete this challenge. 
             Don't forget the space after the closing parentheses!
 
-<<<<<<< HEAD
-=======
 # Homework #6
 - Given text with tags create object structure where key - the tag name, value - tag value. Nested tags are allowed. Dublicated tag names on the same level are forbiden.(Use regexp)
 - In object cretated in part 1 create function render() - that create from object fields html page.
@@ -94,4 +92,3 @@
     Examples:
     toWeirdCase( "String" );//=> returns "StRiNg"
     toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
->>>>>>> 0cb29c072725a625711a24cc1edf494336ef5798
