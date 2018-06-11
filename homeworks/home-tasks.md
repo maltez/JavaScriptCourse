@@ -92,3 +92,8 @@
     Examples:
     toWeirdCase( "String" );//=> returns "StRiNg"
     toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
+
+# Homework #7
+- Create object tank(fuel, ammo, position-x,y, moveright()each move on one point lost 1 item of fuel, moveleft, movetop, move bottom )
+- Battle field - height, width(in cells), Array of tanks, Array Obstacles(x,y) 
+- Create on html batelfield view with takks on it
