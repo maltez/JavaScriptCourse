@@ -97,3 +97,8 @@
 - Create object tank(fuel, ammo, position-x,y, moveright()each move on one point lost 1 item of fuel, moveleft, movetop, move bottom )
 - Battle field - height, width(in cells), Array of tanks, Array Obstacles(x,y) 
 - Create on html batelfield view with takks on it
+
+# Homework 8
+- Create fake api(function) based on setTimeout or setInterval. It obtains data and after random time send promise response. If obtained string contains world error promise rejected. 
+- Create 7 requests in parallel. Then aggregate them results and push them to another request.
+- After last request obtain results and push them to 3 different request and get the fastest response.
