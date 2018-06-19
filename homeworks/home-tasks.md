@@ -81,8 +81,6 @@
             The returned format must be correct in order to complete this challenge. 
             Don't forget the space after the closing parentheses!
 
-<<<<<<< HEAD
-=======
 # Homework #6
 - Given text with tags create object structure where key - the tag name, value - tag value. Nested tags are allowed. Dublicated tag names on the same level are forbiden.(Use regexp)
 - In object cretated in part 1 create function render() - that create from object fields html page.
@@ -94,4 +92,13 @@
     Examples:
     toWeirdCase( "String" );//=> returns "StRiNg"
     toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
->>>>>>> 0cb29c072725a625711a24cc1edf494336ef5798
+
+# Homework #7
+- Create object tank(fuel, ammo, position-x,y, moveright()each move on one point lost 1 item of fuel, moveleft, movetop, move bottom )
+- Battle field - height, width(in cells), Array of tanks, Array Obstacles(x,y) 
+- Create on html batelfield view with takks on it
+
+# Homework 8
+- Create fake api(function) based on setTimeout or setInterval. It obtains data and after random time send promise response. If obtained string contains world error promise rejected. 
+- Create 7 requests in parallel. Then aggregate them results and push them to another request.
+- After last request obtain results and push them to 3 different request and get the fastest response.
