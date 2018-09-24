@@ -4,16 +4,17 @@
  * @returns {Array<number>} Returns filtered array.
  */
 
+
 function advancedFilter(array) {
+    const newArr = [];
     function isNumberInRange(number) {
-      return number<10 && number>0;
+        return number < 10 && number > 0;
     }
-    var newArr = [];
-      for(var i=0; i<array.length; i++) {
+    for (let i = 0; i < array.length; i += 1) {
         if (isNumberInRange(array[i])) {
-          newArr.push(array[i]);
+            newArr.push(array[i]);
         }
-       }
+    }
     return newArr;
 }
 
