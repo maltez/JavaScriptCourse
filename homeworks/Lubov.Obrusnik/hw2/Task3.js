@@ -7,7 +7,7 @@ function secondsCount(hours) {
 
         return hours * 3600;
     }
-    console.log('Enter a number')
+    console.log('Enter a number');
 }
 // secondsCount();
 module.exports = secondsCount;
