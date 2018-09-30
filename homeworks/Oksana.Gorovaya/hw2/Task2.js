@@ -1,10 +1,5 @@
 let min = 4;
 let result = task2_function(min);
-console.log(result);
-
-
-
-
 
 
 function task2_function(min) {

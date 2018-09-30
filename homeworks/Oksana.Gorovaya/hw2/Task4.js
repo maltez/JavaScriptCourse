@@ -1,7 +1,8 @@
 let first = 6;
 let second = 4;
 let result = task4_function (first, second);
-console.log(result);
+
+
 function task4_function (first, second) {
     if (isNaN(first || second)) {
         return 'Use numbers here';

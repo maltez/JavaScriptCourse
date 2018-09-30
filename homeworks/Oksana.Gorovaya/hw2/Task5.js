@@ -1,6 +1,7 @@
 let n = 7;
 let result = task5_function(n);
-console.log(result);
+
+
 function task5_function(n) {
     if (isNaN(n)) {
         return 'Use numbers here';
