@@ -26,15 +26,7 @@ function stringBuilder(input) {
     else {
         return string;
     }
-};w
+};
 
-console.log(stringBuilder(3));
-console.log(stringBuilder('sda'));
-console.log(stringBuilder(-3));
-console.log(stringBuilder(0));
-console.log(stringBuilder(1));
-console.log(stringBuilder(true));
-
-
-//module.exports = stringBuilder;
+module.exports = stringBuilder;
 
