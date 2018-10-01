@@ -7,7 +7,7 @@ console.log(hourQuoter(10));
 
 function hourQuoter (minute) {
     var string;
-    if (typeof minute == 'string') {
+    if (typeof minute != 'number') {
         string='Enter a number!';
         return string;
     }

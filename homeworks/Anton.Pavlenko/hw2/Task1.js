@@ -7,7 +7,7 @@ console.log(stringBuilder(10));
 
 function stringBuilder(input) {
     var string=1;
-    if (typeof input == 'string') {
+    if (typeof input != 'number') {
         string='Enter a number!';
         return string;
     }

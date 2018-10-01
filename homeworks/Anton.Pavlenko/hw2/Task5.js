@@ -5,7 +5,7 @@
 console.log(factorial(3))
 function factorial(num) {
     var string;
-    if (typeof num == 'string') {
+    if (typeof num != 'number') {
         string='Enter a number!';
         return string;
     }
