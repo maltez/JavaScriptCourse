@@ -8,6 +8,10 @@ function factorial(num) {
         return false;
     }
 
+    if ( n === 0 ){
+        return 1;
+    }
+
     var composition = 1;
 
     if ( num > 0){
