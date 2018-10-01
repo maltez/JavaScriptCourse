@@ -8,7 +8,7 @@ function factorial(num) {
         return false;
     }
 
-    if ( n === 0 ){
+    if ( num === 0 ){
         return 1;
     }
 
