@@ -7,26 +7,29 @@ console.log(hourQuoter(10));
 
 function hourQuoter (minute) {
     var string;
+    var num;
     if (typeof minute != 'number') {
         string='Enter a number!';
-        return string;
+        console.log(string);
+        return 2;
     }
     if(minute<0||minute>59){
         string = 'Enter the correct value';
+        console.log(string);
     }
     if(minute>=0 && minute<=15){
-        string ='The number is in the first quarter';
+        num = 1;
     }
     if(minute>15 && minute<=30){
-        string ='The number is in the second quarter';
+        num = 2;
     }
     if(minute>31 && minute<=45){
-        string ='The number is in the third quarter';
+        num=3
     }
     if(minute>45 && minute<=59){
-        string ='The number is in the fourth quarter';
+        num=4;
     }
-    return string;
+    return num;
 }
 
 module.exports = hourQuoter;

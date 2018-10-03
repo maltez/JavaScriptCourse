@@ -10,7 +10,8 @@ function isDevided(first, second) {
 
     if (typeof first != 'number'|| typeof second != 'number') {
         string='Enter a number!!!';
-        return string;
+        console.log(string);
+        return 2;
     }
     var div = first%second;
     if(!div){

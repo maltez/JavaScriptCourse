@@ -2,20 +2,23 @@
  * @param {number} num
  * @returns {number} Returns factorial of num.
  */
-console.log(factorial(3))
+console.log(factorial(-1))
 function factorial(num) {
     var string;
     if (typeof num != 'number') {
         string='Enter a number!';
-        return string;
+        console.log(string);
+        return 2;
     }
     if(num<0){
         string = 'Enter the correct value';
-        return string;
+        console.log(string);
+        return 2;
     }
     if (!Number.isInteger(num)){
         string = 'Enter the integer value';
-        return string;
+        console.log(string);
+        return 2;
     }
     if(num == 0) {
         return 1;
