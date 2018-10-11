@@ -3,14 +3,20 @@
  * @param {Array<number>} input
  * @returns {Array<number>} Returns filtered array.
  */
+
+function isNumberInRange(num) {
+    return num > 0 && num < 10;
+}
+
 function advancedFilter(arr) {
-    var mas2 = [];
+
+    var masResult = [];
     for (var i = 0; i < arr.length; i += 1) {
-        if (arr[i] > 0 && arr[i] < 10) {
-            mas2.push(arr[i]);
+        if (typeof arr[i] == 'number' && isNumberInRange(arr[i])) {
+            masResult.push(arr[i]);
         }
     }
-    return mas2;
+    return masResult;
 }
-// advancedFilter([1, 15, 3, -2, 8]);
-module.exports = advancedFilter;
+console.log(advancedFilter([1, 15, 'lol', -2, 8]));
+// module.exports = advancedFilter;
