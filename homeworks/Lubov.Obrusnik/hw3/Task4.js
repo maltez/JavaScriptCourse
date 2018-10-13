@@ -15,7 +15,7 @@ function encode(input = 'Буря мглою небо кроет, вихри с�
     }
     return obj;
 }
-// console.log(encode());
+console.log(encode());
 
 /**
  * Decode array of numbers to string by Stirlitz method
