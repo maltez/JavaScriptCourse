@@ -1,0 +1,17 @@
+let first_number = 10;
+let second_number = 50;
+let result = (find_divisor (first_number, second_number));
+console.log(result);
+
+function find_divisor(first_number, second_number) {
+    let smaller_number = first_number < second_number ? first_number : second_number;
+    if (first_number > 0 && second_number > 0) {
+        for (i = smaller_number; i >= 1; i--) {
+            if (first_number % i === 0 && second_number % i === 0) {
+                return i;
+            }
+        }
+    }else {
+        return 'use positive numbers only!'
+    }
+}
