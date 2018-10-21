@@ -4,7 +4,12 @@
  * @returns {Array<number>} Returns filtered array.
  */
 const advancedFilter = (input) => {
-    return;
+    var arr = [];
+    for (var i = 0; i < input.length; i += 1) {
+        if (input[i] % 3 === 0 || input[i] % 5 === 0 || input[i] % 7 === 0) {
+            arr.push(input[i])
+        }
+    } return arr
 };
 
 module.exports = advancedFilter;

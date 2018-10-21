@@ -5,7 +5,11 @@
  * @returns {number} Returns filtered array.
  */
 const maxMin = (input, order = true) => {
-    return;
+    if (order === true) {
+        return Math.max(...input);
+    } else if (order === false) {
+        return Math.min(...input);
+    }
 };
 
 module.exports = maxMin;
