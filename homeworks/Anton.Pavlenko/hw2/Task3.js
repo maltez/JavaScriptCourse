@@ -10,12 +10,12 @@ function secondsCount(hours) {
     if (typeof hours != 'number') {
         string='Enter a number!';
         console.log(string);
-        return 2;
+        return -2;
     }
     if(hours<0){
         string = 'Enter the correct value';
         console.log(string);
-        return 2;
+        return -2;
     }
     return hours*3600;
 }

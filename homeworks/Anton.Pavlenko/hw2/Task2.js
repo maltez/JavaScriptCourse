@@ -11,7 +11,7 @@ function hourQuoter (minute) {
     if (typeof minute != 'number') {
         string='Enter a number!';
         console.log(string);
-        return 2;
+        return -2;
     }
     if(minute<0||minute>59){
         string = 'Enter the correct value';
