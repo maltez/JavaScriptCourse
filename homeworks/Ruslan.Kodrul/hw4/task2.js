@@ -6,7 +6,15 @@
  */
 
 const lowestMultiple = (num1, num2) => {
-    return;
+
+    let a = Math.abs(num1);
+    let b = Math.abs(num2);
+
+    while (a && b){ a > b ? a %= b : b %= a; }
+
+    a = (a * b) / ( a + b );
+    return a;
+    
 };
 
 module.exports = lowestMultiple;
