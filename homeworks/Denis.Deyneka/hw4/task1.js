@@ -6,8 +6,6 @@
  */
 
 const commonDevisor = (num1, num2) => {
-    var num1;
-    var num2;
     var gcd = function(a, b) {
         if ( ! b) {
             return a;
