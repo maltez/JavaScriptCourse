@@ -1,26 +1,4 @@
-
-
-let x = 16;
-let y = 8;
-nok(x.y);
-let resoult = nok(x,y);
-console.log(nok(x,y));
-function nok(x,y) {
-    return (x / nod(x, y) | 0) * y;
-}
-nod(n,m);
-let n = 56;
-let m = 48;
-function nod(n, m) {
-    if(m > 0) {
-        var k = n%m;
-        return nod(m, k);
-    }
-    else {
-        return abs(n);
-    }
-}
-/*let A = [16, 24, 32, 40, 48];
+let A = [16, 24];
 let resoult = NOK(A);
 console.log(resoult);
 NOK(A);
@@ -33,4 +11,4 @@ function NOK(A)
         a = Math.abs(c*A[i])/(a+b);
     }
     return a;
-}*/
+}
