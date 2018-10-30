@@ -12,7 +12,7 @@ function advancedFilter(arr) {
 
     var masResult = [];
     for (var i = 0; i < arr.length; i += 1) {
-        if (typeof arr[i] == 'number' && isNumberInRange(arr[i])) {
+        if (typeof arr[i] === 'number' && isNumberInRange(arr[i])) {
             masResult.push(arr[i]);
         }
     }

@@ -5,13 +5,14 @@
  * @returns {number} Returns filtered array.
  */
 const maxMin = (input, order = true) => {
-    if (order == true) {
+    if (order) {
         return Math.max(...input);
-    } else if (order == false) {
+    }
+    else if (order === false) {
         return Math.min(...input);
     } else {
         return 'error';
     }
 };
-// console.log(maxMin([3, 10, 67, 8, 199], false));
+// console.log(maxMin([3, 10, 67, 8, 199]));
 module.exports = maxMin;

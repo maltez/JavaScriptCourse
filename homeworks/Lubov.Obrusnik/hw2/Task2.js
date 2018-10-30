@@ -3,7 +3,7 @@
  * @returns {number} Returns the quoter based on input.
  */
 function hourQuoter(minute) {
-    if (typeof (minute) == 'number' && minute >= 0 && minute <= 59) {
+    if (typeof (minute) === 'number' && minute >= 0 && minute <= 59) {
         switch (true) {
             case (minute >= 0 && minute <= 15):
                 console.log('First quarter of the hour');

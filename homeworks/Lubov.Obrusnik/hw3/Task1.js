@@ -12,7 +12,7 @@ function negativeFilter(arr) {
 
     var masPositive = [];
     for (var i = 0; i < arr.length; i += 1) {
-        if (typeof arr[i] == 'number' && isPositive(arr[i])) {
+        if (typeof arr[i] === 'number' && isPositive(arr[i])) {
             masPositive.push(arr[i]);
         }
     }

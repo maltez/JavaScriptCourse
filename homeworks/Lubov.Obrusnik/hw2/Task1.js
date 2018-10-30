@@ -5,7 +5,7 @@
  */
 function stringBuilder(input) {
 
-    if (typeof (input) == 'number') {
+    if (typeof (input) === 'number') {
 
         let str = '';
         if (input >= 1) {

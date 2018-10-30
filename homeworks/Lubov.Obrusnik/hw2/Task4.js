@@ -5,8 +5,8 @@
  */
 function isDevided(first, second) {
 
-    if (typeof (first) == 'number' && typeof (second) == 'number') {
-        return first % second == 0;
+    if (typeof (first) === 'number' && typeof (second) === 'number') {
+        return first % second === 0;
     } else {
         console.log('It is not number');
     }
