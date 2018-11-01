@@ -26,7 +26,6 @@ const createPhoneNumber =(input) => {
     var secondThreeNum = secondThree.join('');
     var lastFourNum = input.join('');
 
-
     return ('(' + firstThreeNum + ')' + ' ' + secondThreeNum + '-' + lastFourNum);
   
 }

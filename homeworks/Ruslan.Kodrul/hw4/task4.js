@@ -15,7 +15,7 @@ const maxMin = (input, order = true) => {
     var minValue = input[0];
     var maxValue = input[input.length - 1];
     
-    if (order === false){
+    if (order){
         return minValue;
     } else {
         return maxValue;

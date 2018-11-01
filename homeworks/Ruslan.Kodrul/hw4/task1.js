@@ -7,12 +7,16 @@
 
 const commonDevisor = (num1, num2) => {
 
-    let a = Math.abs(num1);
-    let b = Math.abs(num2);
+    var absNum1 = Math.abs(num1);
+    var absNum2 = Math.abs(num2);
 
-    while (a && b){ a > b ? a %= b : b %= a; }
-        a += b;
-     return a;
+    while (absNum1 && absNum2){
+        absNum1 > absNum2 ? absNum1 %= absNum2 : absNum2 %= absNum1; 
+    }
+
+    absNum1 += absNum2;
+
+    return absNum1;
      
 };
 
