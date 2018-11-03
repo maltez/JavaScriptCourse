@@ -1,16 +1,22 @@
 /**
- * 
+ * Split and group textArray to Arrays group by polyndroms.
+ * return [[],...,[]];
  * @param {Array} textArray
- */
-const polyMaker = function (textArray) {
+*/
+const polyMaker = function (textArray, save_textArray = true) {
     if (!textArray) {
         return;
     } else if (textArray.length === 1) {
         return textArray.slice();
     }
 
+    if (save_textArray) {
+        var textArray = textArray.slice();
+    }
+
+
     /**
-     * 
+     * find 'Polyndrom' for text
      * @param {string} text
      */
     var groupPoly = function (text) {
@@ -48,9 +54,9 @@ const polyMaker = function (textArray) {
         }
         return resArray;
     }
-    var ResArray = [];
-    var tmpArray = [];
 
+
+    var ResArray = [];
     while (textArray.length) {
         ResArray.push(groupPoly(textArray[0]));
     }
@@ -58,5 +64,5 @@ const polyMaker = function (textArray) {
     return ResArray;
 }
 
-
-console.log(polyMaker(['abc', 'cba', 'dd', 'bcc', 'dd', 'baca']));
+var arra = ['abc', 'cba', 'dd', 'bcc', 'dd', 'baca'];
+console.log(polyMaker(arra));
