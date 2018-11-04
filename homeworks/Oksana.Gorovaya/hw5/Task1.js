@@ -30,25 +30,4 @@ function decrypt(encryptedText, n, text) {
     let decryptedText = encryptedText;
     return decryptedText;
 }
-
-
-/*function decrypt(encryptedText, n) {
-    let encryptedPart1 = encryptedText.split([,]).slice(0, encryptedText.length / 2).join('');
-    console.log(encryptedPart1);
-    let encryptedPart2 = encryptedText.split([,]).slice(encryptedText.length / 2).join('');
-    console.log(encryptedPart2);
-    let newArray = joinArrays(encryptedPart1, encryptedPart2);
-
-    function joinArrays(encryptedPart1, encryptedPart2) {
-        let newArray = [];
-
-        for (i = 0; i < encryptedText.length / 2; i++) {
-            newArray.push(encryptedPart1.shift());
-            newArray.push(encryptedPart2.shift());
-        }
-        console.log(newArray);
-
-        return newArray;
-    }
-}*/
     
