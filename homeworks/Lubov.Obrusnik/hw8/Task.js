@@ -14,7 +14,7 @@ var Flower = function(name) {
 
 //create instans of object
 
-var tree = new Tree('Yablonya');
+var tree = new Tree('Apple tree');
 
 
 Flower.prototype = Object.create(Tree.prototype);
