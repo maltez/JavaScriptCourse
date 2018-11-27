@@ -5,8 +5,10 @@
  */
 function stringBuilder(input) {
 
-    if (typeof input == 'number') {
+    if (typeof input === 'number') {
+
         var stringNumber = '';
+        
         if (input > 1) {
             for (var counter = 1; counter <= input; counter += 1) {
                 stringNumber += counter + ((counter < input) ? ',' : '');

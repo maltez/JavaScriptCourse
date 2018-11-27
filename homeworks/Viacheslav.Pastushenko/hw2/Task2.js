@@ -3,7 +3,7 @@
  * @returns {number} Returns the quoter based on input.
  */
 function hourQuoter (minute) {
-    if (typeof minute == 'number' && minute >= 0 && minute < 60) {
+    if (typeof minute === 'number' && minute > 0 && minute < 60) {
         if (minute <= 15) {
             return 'First quarter';
         } else if (minute <= 30) {
