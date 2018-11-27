@@ -7,7 +7,7 @@
 
  const commonDevisor = (num1, num2) => {
 
-    if (typeof num1 == 'number' && typeof num2 == 'number') {
+    if (typeof num1 === 'number' && typeof num2 === 'number') {
         if (num2 > 0) {
             let getModulus = num1 % num2;
             return commonDevisor(num2, getModulus);
