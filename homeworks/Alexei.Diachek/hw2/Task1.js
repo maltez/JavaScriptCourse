@@ -12,7 +12,7 @@ function stringBuilder(input) {
     return false;
   }
 
-  if (input > 1) {
+  if (input > startPoint) {
     while (startPoint < input) {
       startPoint += 1;
       result += ', ' + startPoint;
