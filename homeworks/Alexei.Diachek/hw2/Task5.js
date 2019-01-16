@@ -3,7 +3,7 @@
  * @returns {number} Returns factorial of num.
  */
 function factorial(num) {
-  if (typeof num !== 'number') {
+  if (typeof num !== 'number' || num < 0) {
     return false;
   }
   if (num === 0 || num === 1) {
