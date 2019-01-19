@@ -48,12 +48,20 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
       ' '
     ];
     let result = [];
+    const SECOND_VALUE = 100;
     input
       .toLowerCase()
       .split('')
       .forEach(function(e) {
         if (alphabet.indexOf(e) !== -1) {
-          result.push(alphabet.indexOf(e));
+          //random will be 1 or 0
+          let random = Math.round(Math.random());
+          //choose how to conver a letter, in index of letter or index + secondValue
+          if (random === 0) {
+            result.push(alphabet.indexOf(e));
+          } else {
+            result.push(alphabet.indexOf(e) + SECOND_VALUE);
+          }
         }
       });
     return result;
@@ -73,6 +81,7 @@ function decode(input, key = 'абвгдеёжзийклмнопрстуфхцч
     return false;
   }
   if (key === 'js') {
+    const SECOND_VALUE = 100;
     let output = '';
     let alphabet = [
       'а',
@@ -115,45 +124,11 @@ function decode(input, key = 'абвгдеёжзийклмнопрстуфхцч
     input.forEach(function(e) {
       if (e >= 0 && e < alphabet.length) {
         output += alphabet[e];
+      } else if (e >= 100 && e < alphabet.length + SECOND_VALUE) {
+        output += alphabet[e - SECOND_VALUE];
       }
     });
     return output;
-  } else {
-    return 'Your key is wrong';
-  }
-}
-
-/**
- * Encode string into number array by Stirlitz method
- * @param {string} input string for encoding
- * @param {string} key key for encoding
- * @returns {Array<number>} Returns encoded array of numbers.
- */
-function encode_v2(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
-  if (key === 'js') {
-    let arrOfCodes = [];
-    for (var i = 0; i < input.length; i++) {
-      arrOfCodes.push(input[i].codePointAt());
-    }
-    return arrOfCodes;
-  } else {
-    return 'Your key is wrong';
-  }
-}
-
-/**
- * Decode array of numbers to string by Stirlitz method
- * @param {Array<number>} input Array of numbers
- * @param {string} key key for decoding
- * @returns {string} Returns decoded string.
- */
-function decode_v2(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
-  if (key === 'js') {
-    let arrOfLetters = [];
-    input.forEach(function(e) {
-      arrOfLetters.push(String.fromCodePoint(e));
-    });
-    return arrOfLetters.join('');
   } else {
     return 'Your key is wrong';
   }
