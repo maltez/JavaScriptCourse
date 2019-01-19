@@ -21,9 +21,6 @@
 
 return true;
 }
-console.log(isPolindrome('1223344'));  
-
-
-//was it a car or a cat I saw'
+console.log(isPolindrome('Acssba'));  
 
 
