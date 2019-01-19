@@ -9,7 +9,7 @@ function negativeFilter(input) {
 
     for (let i = 0; i < input.length; i++) {
         if (isPositive(input[i])) {
-            positiveNumbers += input[i];
+            positiveNumbers.push(input[i]);  
         }
     }
 

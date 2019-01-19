@@ -9,7 +9,7 @@ function advancedFilter(input) {
 
     for (let i = 0; i < input.length; i++) {
         if (isNumberInRange(input[i])) {
-            filteredNumbers += input[i];
+            filteredNumbers.push(input[i]);
         }
     }
 
