@@ -76,7 +76,7 @@ function encode(input = 'абвгдеёжзийклмнопрстуфхцчшщ�
  * @param {string} key key for decoding
  * @returns {string} Returns decoded string.
  */
-function decode(input = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя', key) {
+function decode(input, key) {
   if (!Array.isArray(input)) {
     return false;
   }
