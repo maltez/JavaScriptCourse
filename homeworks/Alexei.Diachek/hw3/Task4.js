@@ -61,6 +61,7 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
     return 'Your key is wrong';
   }
 }
+
 /**
  * Decode array of numbers to string by Stirlitz method
  * @param {Array<number>} input Array of numbers
@@ -71,7 +72,7 @@ function decode(input, key = 'абвгдеёжзийклмнопрстуфхцч
   if (!Array.isArray(input)) {
     return false;
   }
-  if ((key = 'js')) {
+  if (key === 'js') {
     let output = '';
     let alphabet = [
       'а',
