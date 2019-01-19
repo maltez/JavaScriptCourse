@@ -4,7 +4,7 @@
  * @param {string} key key for encoding
  * @returns {Array<number>} Returns encoded array of numbers.
  */
-function encode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
+function encode(input = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя', key) {
   if (typeof input !== 'string') {
     return false;
   }
@@ -76,7 +76,7 @@ function encode(input, key = 'абвгдеёжзийклмнопрстуфхцч
  * @param {string} key key for decoding
  * @returns {string} Returns decoded string.
  */
-function decode(input, key = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя') {
+function decode(input = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя', key) {
   if (!Array.isArray(input)) {
     return false;
   }
