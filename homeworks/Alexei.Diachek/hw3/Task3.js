@@ -9,7 +9,7 @@ function isPolindrome(input) {
     .split(' ')
     .join('');
   let reverseStr = inputForCompare
-    .split()
+    .split('')
     .reverse()
     .join('');
   return inputForCompare === reverseStr;
