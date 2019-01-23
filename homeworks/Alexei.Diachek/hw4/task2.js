@@ -8,16 +8,15 @@
 const lowestMultiple = (num1, num2) => {
   let minNum = num1 > num2 ? num2 : num1;
   let maxNum = num1 < num2 ? num2 : num1;
-  //calculating start point for loop
-  let count = minNum * Math.floor(maxNum / minNum);
+  let count = maxNum;
   if (maxNum % minNum === 0) {
     return maxNum;
   }
   while (true) {
-    if (count % maxNum === 0) {
+    if (count % minNum === 0) {
       return count;
     }
-    count += minNum;
+    count += maxNum;
   }
 };
 module.exports = lowestMultiple;
