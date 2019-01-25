@@ -1,4 +1,5 @@
 var shift = function(arr) {
+  'use strict';
   if (!Array.isArray(arr) || arr.length < 1) {
     return false;
   }
