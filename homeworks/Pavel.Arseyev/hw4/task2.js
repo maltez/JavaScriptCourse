@@ -12,10 +12,10 @@ const lowestMultiple = (num1, num2) => {
         if(num1 !== 0 && num2 !== 0){
             let i = 1;
             while(i > 0){
-                i++;
                 if(!(i%num1) && !(i%num2)){
                     return i;
                 }
+                i++;
             }
         } else{
             return 'Zero is not allowed here, put a number below or above 0'
@@ -25,7 +25,7 @@ const lowestMultiple = (num1, num2) => {
     }  
 };
 
-console.log(lowestMultiple(326, 856));
+console.log(lowestMultiple(23, 856));
 
 
 module.exports = lowestMultiple;
