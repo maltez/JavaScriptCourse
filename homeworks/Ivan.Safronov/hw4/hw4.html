@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HW4</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	
+//1) Наибольший общий делитель:
+
+
+//---
+
+
+//2) Наименьшее общее кратное:
+
+var a = 6;
+var b = 12;
+if(a>0 && b>0) {
+var k = (a%b)/2;
+var result = k;
+console.log('Наименьшее общее кратное: ' + result);
+}
+
+
+
+//3) Сколько чисел в массиве кратно 3,5 и 7:
+
+var resultArray = result;
+var number = [2,12,34,55,27,88,23];
+	 for(var i = 0; i < number.length; i++){
+	 	if(!number[i]%3 && !number[i]%5 && !number[i]%7){
+	 		var result = resultArray.push(number[i]);
+	 	}
+	 	console.log("Чисел в массиве кратно 3, 5 и 7: " + resultArray);
+	 }
+	 
+//4) Вернуть из массива наибольшее число если булево значение равно true и наименьшее если булевое значение равно false.
+
+var bool = false;
+var array = [12,0,2,7,32,3,4,54,27, bool];
+if (bool==true){
+console.log(Math.max.apply(Math, array));
+}
+else if (bool==false) {
+	console.log(Math.min.apply(Math, array));
+}
+else{
+	console.log("O-o-ops...");
+}
+
+</script>
+
+
+</body>
+</html>
