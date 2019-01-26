@@ -7,9 +7,10 @@
  function isPolindrome(input) {
 
     input = input.toLowerCase();        // register change
+    
      var count = input.length;
 
-     for (i = 0; i< count; i++){
+     for (var i = 0; i< count; i++){
 
          if( input[i] === input[count - 1]){
             count = count - 1;
@@ -21,6 +22,7 @@
 
 return true;
 }
-console.log(isPolindrome('Acssba'));  
+console.log(isPolindrome('abssba'));  
 
 
+//module.exports = isPolindrome;

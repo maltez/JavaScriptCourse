@@ -16,7 +16,7 @@ function isNumberInRange(item) {
 
 function advancedFilter(input) {
     var newArray =  [];
-   for(i = 0; i < input.length; i++) {
+   for(var i = 0; i < input.length; i++) {
 
        if(typeof input[i] === 'number') {
            if (isNumberInRange(input[i])) {
@@ -32,3 +32,5 @@ function advancedFilter(input) {
     return newArray;
 };
 console.log(advancedFilter([1, 76, 3, 'items', 0, 4, 44, 5, 6, -1, -22, 7, true]));
+
+//module.exports = advancedFilter;

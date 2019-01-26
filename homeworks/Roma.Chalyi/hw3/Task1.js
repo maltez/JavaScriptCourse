@@ -16,9 +16,9 @@
 function negativeFilter(input) {
     var newArray =  [];
 
-    for (i = 0; i < input.length; i++) {
+    for (var i = 0; i < input.length; i++) {
         if (typeof input[i] === 'number'){
-            if ( isPositive(input[i])) {
+            if ( isPositive(input[i]) === true) {
 
                 newArray.push(input[i]);
             }   
@@ -30,5 +30,7 @@ function negativeFilter(input) {
     return newArray;
 }     
 
-console.log(negativeFilter([3, 7, 5, 'hello', false, -55, 44, '34', 60, 17, -0, 0, '54767687', true]));
+console.log(negativeFilter([true, 5]));
+
+//module.exports = negativeFilter;
 
