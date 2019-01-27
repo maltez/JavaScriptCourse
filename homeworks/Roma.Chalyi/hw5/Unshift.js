@@ -15,8 +15,6 @@ function AddToTop( array, element) {
                 return array;
             } 
         }
-        return 'вышло из цыкла'
-
     }
     else {
         return 'the function should take an array';
