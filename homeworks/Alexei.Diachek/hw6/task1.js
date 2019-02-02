@@ -45,14 +45,10 @@ const decrypt = (encryptedText, n) => {
     return encryptedText;
   }
   let result = encryptedText;
-
+  let halfOfLentgh = Math.floor(result.length / 2);
   while (n >= 1) {
-    let firstHalfOfStr = Array.prototype.slice.call(
-      result,
-      0,
-      result.length / 2
-    );
-    let secondHalfOfStr = Array.prototype.slice.call(result, result.length / 2);
+    let firstHalfOfStr = Array.prototype.slice.call(result, 0, halfOfLentgh);
+    let secondHalfOfStr = Array.prototype.slice.call(result, halfOfLentgh);
     result = '';
     secondHalfOfStr.forEach((e, idx) => {
       if (firstHalfOfStr[idx]) {
